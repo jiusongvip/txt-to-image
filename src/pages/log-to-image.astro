@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageCTA from '../components/PageCTA.astro';
+---
+
+<Layout
+  title="Log to Image — Free Online Log File to PNG/JPG Converter | txttoimage"
+  description="Convert .log files and server logs to PNG or JPG images for incident reports and documentation. Free, private, client-side processing. No uploads required."
+  path="/log-to-image"
+>
+  <section class="min-h-[50dvh] flex flex-col pt-28 pb-12">
+    <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full px-4">
+      <p class="text-sm text-emerald-600 font-medium mb-3"><a href="/" class="hover:underline">txttoimage</a> &rsaquo; Log to Image</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">Log to Image Converter — Share Logs Your Team Can Actually Read</h1>
+      <p class="mt-4 text-lg text-zinc-500 leading-relaxed max-w-2xl">Convert server logs, application logs, and debug output to clean images. Share exactly what you see in your terminal — no copy-paste formatting loss, no mangled timestamps, no broken alignment.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/#generator" class="bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-medium px-6 py-3 rounded-full transition-all duration-150 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Convert Log to Image Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="py-4 bg-white border-b border-zinc-200 sticky top-14 z-40">
+    <div class="max-w-3xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto">
+      <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 shrink-0">On this page:</span>
+      <a href="#use-cases" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Use Cases</a>
+      <a href="#how-to" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">How To</a>
+      <a href="#tips" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Pro Tips</a>
+      <a href="#faq" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">FAQ</a>
+    </div>
+  </nav>
+
+  <section id="use-cases" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Use Cases for Log-to-Image Conversion</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Sysadmins, SREs, and developers deal with log files daily. Here is how converting logs to images improves team communication.</p>
+
+      <div class="mt-8 space-y-5">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Incident Post-Mortems</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Include exact log excerpts in post-mortem documents. Images preserve the original formatting, timestamps, and log levels exactly as they appeared during the incident. This provides an unambiguous record that cannot be accidentally edited or reformatted when pasted between different tools.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Team Chat Communication</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Pasting log output into Slack, Teams, or Discord often results in mangled formatting, broken line breaks, and unreadable text. Converting to an image first ensures your team sees the log output exactly as you intended — with correct alignment, timestamps, and readability.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Bug Reports and Jira Tickets</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Attach log images to GitHub issues and Jira tickets instead of pasting raw text. Developers can see the full context at a glance without downloading and opening log files. Images also maintain formatting that would be lost in ticket description fields.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Runbooks and Troubleshooting Guides</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Include real log output examples in your internal runbooks and troubleshooting documentation. Team members can compare what they see in their terminal to the expected output shown in the runbook image — much more effective than describing log patterns in words.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-to" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">How to Convert Log Files to Images</h2>
+      <div class="mt-8 space-y-6">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">1</span><h3 class="font-semibold text-zinc-900 text-lg">Drop Your .log File</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Drag and drop your .log file (or .txt, or any text-based log export). The converter reads it locally and shows a preview. 100% client-side — your log data never leaves your device.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">2</span><h3 class="font-semibold text-zinc-900 text-lg">Apply Log-Specific Settings</h3></div>
+          <ul class="space-y-2 text-sm text-zinc-500 ml-4 list-disc">
+            <li><strong>Font:</strong> Monospace — essential for preserving timestamp and log level alignment</li>
+            <li><strong>Font size:</strong> 10-12px for dense logs, 14px for excerpts shared in tickets</li>
+            <li><strong>Background:</strong> Dark (#1e1e1e) with light text (#e0e0e0) — matches terminal output</li>
+            <li><strong>Aspect ratio:</strong> 16:9 for wide log output, 3:4 for terminal-style vertical output</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">3</span><h3 class="font-semibold text-zinc-900 text-lg">Download and Share</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Click Convert to Image. The log output renders in monospace with all formatting preserved. Download as PNG for documentation and incident reports, or JPG for quick sharing in team chat channels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Log Conversion Tips for Sysadmins and SREs</h2>
+
+      <div class="mt-8 space-y-4">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Filter Before Converting</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">For large log files, filter the relevant lines before conversion. Use grep, awk, or your log management tool to extract the specific time range, error level, or service name you need. A focused 50-line log excerpt is far more useful in an incident report than a 5,000-line dump.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Dark Background Looks Authentic</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">A dark background with light monospace text looks like a real terminal. Use #1e1e1e for the background and #e0e0e0 for text. This is immediately recognizable to technical audiences and renders cleanly on both light and dark mode interfaces.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Include Timestamps for Context</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">When sharing log excerpts, ensure the timestamps are visible in the image. This gives recipients critical context about when events occurred. If your log format includes millisecond-precision timestamps, the monospace font will preserve the alignment perfectly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
+
+      <dl class="mt-8 space-y-1">
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Are my production log files secure during conversion? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes — and this is especially critical for production logs which often contain sensitive information like IP addresses, user IDs, API keys, and internal hostnames. txttoimage processes everything client-side: your log files are read by your browser, rendered on a local canvas, and never transmitted to any server. Most other log-to-image tools and screenshot services require uploading your logs — txttoimage never does. This makes it safe for use with production system logs, even in SOC 2 and HIPAA-compliant environments where data exfiltration is a concern.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What log file formats are supported? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Any log file that can be opened as text: .log, .txt, .out, .err, Apache/Nginx access and error logs, syslog, Docker container logs, Kubernetes pod logs, application logs, CI/CD pipeline output, and any other plain-text log format. If you can view it in a terminal or text editor, the converter can process it. Binary log formats are not supported.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">How do I handle very large log files? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">The converter handles up to 10MB or 5,000 lines per file. Before conversion, filter your log file to the relevant section using standard command-line tools. For example: <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">grep "ERROR" app.log | tail -100 > excerpt.log</code> will extract the last 100 error lines. This is actually best practice — sharing targeted log excerpts is more effective than sharing entire log files in incident communications.</div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-lg font-semibold text-zinc-500 uppercase tracking-wide">Related Converters</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="/txt-to-png" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">TXT to PNG</a>
+        <a href="/code-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Code to Image</a>
+        <a href="/csv-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">CSV to Image</a>
+        <a href="/" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">All Converters</a>
+      </div>
+    </div>
+  </section>
+
+  <PageCTA title="Convert Your Log File to an Image" description="Share log output with your team in a format everyone can open. 100% private, no uploads." buttonText="Convert Log to Image" />
+
+  <script type="application/ld+json" is:inline>
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are my production log files secure during conversion?","acceptedAnswer":{"@type":"Answer","text":"Yes. txttoimage processes everything client-side: your log files are read by your browser, rendered on a local canvas, and never transmitted to any server. This makes it safe for production system logs, even in SOC 2 and HIPAA-compliant environments."}},{"@type":"Question","name":"What log file formats are supported?","acceptedAnswer":{"@type":"Answer","text":"Any log file that can be opened as text: .log, .txt, Apache/Nginx logs, syslog, Docker logs, Kubernetes pod logs, application logs, CI/CD pipeline output, and any other plain-text log format."}}]}
+  </script>
+</Layout>

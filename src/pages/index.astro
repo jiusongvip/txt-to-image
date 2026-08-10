@@ -1,0 +1,402 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Features from '../components/Features.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import Footer from '../components/Footer.astro';
+import Showcase from '../components/Showcase.astro';
+import Comparison from '../components/Comparison.astro';
+import UseCases from '../components/UseCases.astro';
+import CTABar from '../components/CTABar.astro';
+---
+
+<Layout
+  title="Free TXT to Image Converter — No Upload, No Sign-Up | txttoimage"
+  description="Convert text files to PNG, JPG, or WebP instantly. 100% client-side — no upload, no sign-up, unlimited. 20+ formats. Files stay private on your device."
+>
+  <section class="min-h-[100dvh] flex flex-col pt-20 pb-16">
+    <div id="generator">
+    <div class="flex-1 flex flex-col items-center justify-center max-w-3xl mx-auto w-full px-4">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 text-center leading-[1.1]">
+        Free TXT to Image Converter — No Upload Needed
+      </h1>
+      <p class="mt-5 text-lg text-zinc-500 text-center max-w-2xl leading-relaxed">
+        Convert .txt, .md, .csv, .log, .json, .xml and 20+ text file formats to PNG, JPG, or WebP images instantly. <strong class="text-zinc-700">100% client-side — your files never leave your device.</strong> Unlike Convertio, Online-Convert, and other server-based tools, we never upload your data anywhere. No sign-up, no limits. <a href="/how-it-works" class="text-emerald-600 hover:underline">Learn how it works.</a>
+      </p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <span class="inline-flex items-center gap-1.5 text-sm text-zinc-500 bg-white border border-zinc-200 rounded-full px-3.5 py-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Free forever
+        </span>
+        <span class="inline-flex items-center gap-1.5 text-sm text-zinc-500 bg-white border border-zinc-200 rounded-full px-3.5 py-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          No sign-up required
+        </span>
+        <span class="inline-flex items-center gap-1.5 text-sm text-zinc-500 bg-white border border-zinc-200 rounded-full px-3.5 py-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          100% client-side
+        </span>
+        <span class="inline-flex items-center gap-1.5 text-sm text-zinc-500 bg-white border border-zinc-200 rounded-full px-3.5 py-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          20+ file formats
+        </span>
+      </div>
+      <p class="mt-4 text-xs text-zinc-400 text-center">Built by <a href="/about" class="text-zinc-500 hover:text-emerald-600 underline underline-offset-2 transition-colors">Jiusong</a> · Independent · No ads, no tracking</p>
+
+      <div class="mt-10 w-full max-w-2xl">
+        <!-- Input mode tabs -->
+        <div class="flex border-b border-zinc-200 mb-4">
+          <button id="tab-upload" class="px-4 py-2.5 text-sm font-medium text-emerald-600 border-b-2 border-emerald-500 -mb-px transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="inline mr-1.5 -mt-0.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+            Upload File
+          </button>
+          <button id="tab-text" class="px-4 py-2.5 text-sm font-medium text-zinc-400 hover:text-zinc-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="inline mr-1.5 -mt-0.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Type or Paste Text
+          </button>
+        </div>
+
+        <div id="upload-mode" class="">
+        <div id="drop-zone" class="border-2 border-dashed border-zinc-300 rounded-2xl p-12 text-center cursor-pointer hover:border-emerald-400 hover:bg-emerald-50/50 transition-all duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="1.5" class="mx-auto mb-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+          <p class="text-zinc-500 font-medium">Drop your text file here</p>
+          <p class="text-sm text-zinc-400 mt-1">or click to browse &mdash; .txt, .md, .csv, .log, .json, .xml and more</p>
+          <p class="text-xs text-violet-500 mt-2 flex items-center justify-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Upload .js / .py / .go / .css for automatic syntax highlighting — try a sample:
+          </p>
+          <p class="text-xs mt-1 flex items-center justify-center gap-2">
+            <button onclick="event.stopPropagation();loadDemo('/demo.py', 'demo.py')" class="text-zinc-400 hover:text-emerald-500 transition-colors underline underline-offset-2 cursor-pointer">Python</button>
+            <span class="text-zinc-300">·</span>
+            <button onclick="event.stopPropagation();loadDemo('/demo_js.js', 'demo_js.js')" class="text-zinc-400 hover:text-emerald-500 transition-colors underline underline-offset-2 cursor-pointer">JavaScript</button>
+            <span class="text-zinc-300">·</span>
+            <button onclick="event.stopPropagation();loadDemo('/demo_go.go', 'demo_go.go')" class="text-zinc-400 hover:text-emerald-500 transition-colors underline underline-offset-2 cursor-pointer">Go</button>
+            <span class="text-zinc-300">·</span>
+            <button onclick="event.stopPropagation();loadDemo('/demo_css.css', 'demo_css.css')" class="text-zinc-400 hover:text-emerald-500 transition-colors underline underline-offset-2 cursor-pointer">CSS</button>
+          </p>
+          <input type="file" id="file-input" class="hidden" accept=".txt,.md,.log,.csv,.text,.json,.xml,.yml,.yaml,.cfg,.ini,.conf,.html,.css,.js,.ts,.py,.java,.c,.cpp,.h,.rb,.go,.rs" />
+        </div>
+        </div>
+
+        <div id="text-mode" class="hidden">
+          <textarea id="text-input" class="w-full h-64 border-2 border-zinc-200 rounded-2xl p-5 text-sm font-mono text-zinc-700 bg-white resize-y focus:border-emerald-400 focus:ring-0 outline-none transition-colors" placeholder="Type or paste your text here...&#10;&#10;The live preview will update automatically as you type."></textarea>
+          <p id="text-char-count" class="text-xs text-zinc-400 mt-1.5 ml-1">0 characters</p>
+        </div>
+
+        <div id="file-info" class="hidden mt-4 bg-white border border-zinc-200 rounded-xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <p id="file-name" class="font-medium text-zinc-900 text-sm"></p>
+              <p id="file-meta" class="text-xs text-zinc-400 mt-0.5"></p>
+            </div>
+            <button id="reset-btn" class="text-xs text-zinc-400 hover:text-red-500 transition-colors px-3 py-1.5 rounded-full border border-zinc-200 hover:border-red-200">Remove</button>
+          </div>
+          <div id="text-preview" class="text-xs font-mono text-zinc-600 bg-zinc-50 rounded-lg p-4 max-h-40 overflow-y-auto whitespace-pre-wrap break-all"></div>
+        </div>
+
+        <div class="mt-6 bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
+          <p class="text-sm font-semibold text-zinc-700 mb-5">Output Settings</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div>
+              <label for="output-format" class="block text-xs font-medium text-zinc-500 mb-1.5">Output Format</label>
+              <select id="output-format" class="w-full text-sm bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 outline-none cursor-pointer hover:border-zinc-300 transition-colors appearance-none">
+                <option value="png">PNG (lossless)</option>
+                <option value="jpg">JPG (smaller)</option>
+                <option value="webp">WebP (best)</option>
+              </select>
+            </div>
+            <div>
+              <label for="font-size" class="block text-xs font-medium text-zinc-500 mb-1.5">Font Size</label>
+              <select id="font-size" class="w-full text-sm bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 outline-none cursor-pointer hover:border-zinc-300 transition-colors appearance-none">
+                <option value="10">10px</option>
+                <option value="12">12px</option>
+                <option value="14" selected>14px</option>
+                <option value="16">16px</option>
+                <option value="18">18px</option>
+                <option value="20">20px</option>
+                <option value="24">24px</option>
+                <option value="28">28px</option>
+                <option value="32">32px</option>
+              </select>
+            </div>
+            <div>
+              <label for="font-family" class="block text-xs font-medium text-zinc-500 mb-1.5">Font Family</label>
+              <select id="font-family" class="w-full text-sm bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 outline-none cursor-pointer hover:border-zinc-300 transition-colors appearance-none">
+                <option value="JetBrains Mono">JetBrains Mono</option>
+                <option value="Fira Code">Fira Code</option>
+                <option value="monospace">System Monospace</option>
+                <option value="Inter">Inter (Sans)</option>
+                <option value="sans-serif">System Sans Serif</option>
+                <option value="Lora">Lora (Serif)</option>
+                <option value="serif">System Serif</option>
+                <option value="cursive">Cursive</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-zinc-500 mb-1.5">Text Style</label>
+              <div class="flex gap-2">
+                <button id="bold-btn" type="button" class="flex-1 text-xs bg-zinc-50 border border-zinc-200 rounded-lg px-2 py-2 font-bold hover:border-zinc-300 transition-colors" title="Bold">B</button>
+                <button id="italic-btn" type="button" class="flex-1 text-xs bg-zinc-50 border border-zinc-200 rounded-lg px-2 py-2 italic hover:border-zinc-300 transition-colors" title="Italic">I</button>
+              </div>
+            </div>
+            <div>
+              <label for="bg-color" class="block text-xs font-medium text-zinc-500 mb-1.5">Background Color</label>
+              <div class="flex items-center gap-2 bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-1.5">
+                <input type="color" id="bg-color" value="#ffffff" class="w-6 h-6 rounded cursor-pointer border-0 p-0" />
+                <span class="text-xs text-zinc-500 font-mono">#ffffff</span>
+              </div>
+            </div>
+            <div>
+              <label for="text-color" class="block text-xs font-medium text-zinc-500 mb-1.5">Text Color</label>
+              <div class="flex items-center gap-2 bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-1.5">
+                <input type="color" id="text-color" value="#1a1a1a" class="w-6 h-6 rounded cursor-pointer border-0 p-0" />
+                <span class="text-xs text-zinc-500 font-mono">#1a1a1a</span>
+              </div>
+              <p class="text-[10px] text-zinc-400 mt-1 leading-tight">Default color for plain text.<br>Code files get auto-highlighted.</p>
+            </div>
+            <div>
+              <label for="padding" class="block text-xs font-medium text-zinc-500 mb-1.5">Padding</label>
+              <select id="padding" class="w-full text-sm bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 outline-none cursor-pointer hover:border-zinc-300 transition-colors appearance-none">
+                <option value="20">20px</option>
+                <option value="30">30px</option>
+                <option value="40" selected>40px</option>
+                <option value="50">50px</option>
+                <option value="60">60px</option>
+                <option value="80">80px</option>
+              </select>
+            </div>
+            <div>
+              <label for="aspect-ratio" class="block text-xs font-medium text-zinc-500 mb-1.5">Aspect Ratio</label>
+              <select id="aspect-ratio" class="w-full text-sm bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 outline-none cursor-pointer hover:border-zinc-300 transition-colors appearance-none">
+                <option value="16:9" selected>16:9 (Widescreen)</option>
+                <option value="4:3">4:3 (Landscape)</option>
+                <option value="1:1">1:1 (Square)</option>
+                <option value="3:2">3:2 (Photo)</option>
+                <option value="9:16">9:16 (Vertical)</option>
+                <option value="3:4">3:4 (Portrait)</option>
+                <option value="auto">Auto Fit (recommended)</option>
+              </select>
+            </div>
+          </div>
+          <button id="convert-btn" disabled class="mt-5 w-full bg-emerald-500 hover:bg-emerald-600 disabled:bg-emerald-300 disabled:cursor-not-allowed active:scale-[0.98] text-white font-medium px-6 py-3 rounded-full transition-all duration-150 flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 12h12l-4 8H10l-4-8z"/><rect x="2" y="9" width="20" height="5" rx="1"/></svg>
+            Convert to Image
+          </button>
+          <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div class="bg-zinc-50 border border-zinc-100 rounded-lg px-3 py-2 text-center cursor-pointer hover:border-emerald-200 hover:bg-emerald-50/30 transition-colors" onclick="preset('code')" title="JetBrains Mono 14px, dark theme, Auto Fit, PNG">
+              <span class="text-[11px] font-semibold text-zinc-700">💻 Code Screenshot</span>
+              <span class="text-[10px] text-zinc-400 block">Dark theme · Auto Fit</span>
+            </div>
+            <div class="bg-zinc-50 border border-zinc-100 rounded-lg px-3 py-2 text-center cursor-pointer hover:border-emerald-200 hover:bg-emerald-50/30 transition-colors" onclick="preset('doc')" title="Inter 16px, white, 16:9, PNG">
+              <span class="text-[11px] font-semibold text-zinc-700">📄 Clean Document</span>
+              <span class="text-[10px] text-zinc-400 block">White · 16:9 · PNG</span>
+            </div>
+            <div class="bg-zinc-50 border border-zinc-100 rounded-lg px-3 py-2 text-center cursor-pointer hover:border-emerald-200 hover:bg-emerald-50/30 transition-colors" onclick="preset('social')" title="Fira Code 16px, dark, 16:9, PNG">
+              <span class="text-[11px] font-semibold text-zinc-700">🐦 Social Post</span>
+              <span class="text-[10px] text-zinc-400 block">Dark · 16:9 · PNG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="result-section" class="hidden py-8 bg-zinc-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight mb-2">Your Converted Image</h2>
+      <p class="text-zinc-500 mb-6">Preview and download your text file rendered as an image.</p>
+      <div class="bg-white border border-zinc-200 rounded-2xl overflow-hidden shadow-sm max-h-[70vh] flex items-center justify-center">
+        <div id="result-placeholder" class="w-full min-h-[200px] bg-gradient-to-br from-zinc-100 to-zinc-50 flex items-center justify-center">
+        </div>
+        <img id="result-image" src="" alt="Converted text file to image" class="max-w-full max-h-[65vh] mx-auto object-contain hidden" />
+      </div>
+      <div class="mt-4 flex items-center gap-3">
+        <button id="download-btn" class="bg-zinc-900 hover:bg-zinc-800 active:scale-[0.98] text-white font-semibold px-6 py-3 rounded-full transition-all duration-150 flex items-center gap-2 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          Download Image
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-8 bg-white border-b border-zinc-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-bold text-zinc-900">20+</p>
+          <p class="text-xs text-zinc-500 mt-1">File formats</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-bold text-zinc-900">29</p>
+          <p class="text-xs text-zinc-500 mt-1">Languages highlighted</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-bold text-zinc-900">8</p>
+          <p class="text-xs text-zinc-500 mt-1">Font families</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-bold text-zinc-900">&lt;1s</p>
+          <p class="text-xs text-zinc-500 mt-1">Conversion speed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TableOfContents />
+  <Features />
+  <Showcase />
+  <Comparison />
+  <HowItWorks />
+  <UseCases />
+  <CTABar />
+
+  <section id="formats" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Supported File Formats</h2>
+      <p class="mt-3 text-zinc-500 max-w-2xl">Our TXT to image converter supports a wide range of text-based file formats, making it useful for developers, writers, data analysts, and anyone working with text files.</p>
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <h3 class="text-sm font-semibold text-zinc-900 mb-3">Plain Text &amp; Documents</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.txt</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.text</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.log</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.md</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.markdown</code>
+          </div>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <h3 class="text-sm font-semibold text-zinc-900 mb-3">Structured Data</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.csv</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.json</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.xml</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.yml</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.yaml</code>
+          </div>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <h3 class="text-sm font-semibold text-zinc-900 mb-3">Configuration</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.cfg</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.ini</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.conf</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.env</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.toml</code>
+          </div>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <h3 class="text-sm font-semibold text-zinc-900 mb-3">Web &amp; Markup</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.html</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.css</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.svg</code>
+          </div>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <h3 class="text-sm font-semibold text-zinc-900 mb-3">Programming Languages</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.js</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.ts</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.py</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.java</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.c</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.cpp</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.h</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.rb</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.go</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.rs</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.php</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.swift</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.kt</code>
+          </div>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <h3 class="text-sm font-semibold text-zinc-900 mb-3">Scripts &amp; SQL</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.sh</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.bat</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.ps1</code>
+            <code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.sql</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
+      <p class="mt-3 text-zinc-500">Answers to common questions about our free TXT to image converter.</p>
+      <dl class="mt-8 space-y-1">
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">How do I convert a TXT file to an image? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Simply drag and drop your text file onto the upload area at the top of the page, or click to browse your computer. Once the file is loaded, you can adjust the output settings (format, font, colors, padding) and click Convert to Image. The entire process runs in your browser using the HTML5 Canvas API — no file upload, no server processing, no waiting. The converted image appears immediately for preview, and you can download it as PNG, JPG, or WebP.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Is this converter really free? Are there any limits? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes, completely free with no hidden costs. There is no limit on how many files you can convert, no registration required, and no premium tiers. Because all processing happens client-side in your browser, we do not incur server costs per conversion, which allows us to offer the tool for free permanently. The only limit is a 10MB maximum file size per conversion, which covers virtually any text file or source code document you would want to convert.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Are my files safe? Do they get uploaded anywhere? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Your files are completely safe. This is the single biggest difference between our converter and traditional server-based services: we never upload your files to any server. All processing happens entirely inside your browser using the FileReader and Canvas APIs. Your document is read locally, rendered locally, and the output image is generated locally. No data ever leaves your device. For developers working with proprietary source code or anyone handling sensitive documents, this means zero risk of data exposure.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What file formats can I convert? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Our converter supports over 20 text-based file formats including plain text (.txt, .text, .log), Markdown (.md, .markdown), data formats (.csv, .json, .xml, .yml, .yaml), configuration files (.cfg, .ini, .conf, .env, .toml), web files (.html, .css), and source code from 13 programming languages (.js, .ts, .py, .java, .c, .cpp, .h, .rb, .go, .rs, .php, .swift, .kt). See the Supported Formats section above for the full categorized list.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What image formats can I export? Which should I choose? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">You can export as PNG (recommended for most uses — lossless quality, sharp text), JPG (smaller file size, good for sharing via email or messaging apps), or WebP (best compression-to-quality ratio, ideal for web use). For code screenshots, documentation, and any use where text clarity matters, PNG is the best choice. For quickly sharing a document preview where file size matters more than perfect sharpness, choose JPG. For embedding images on websites, WebP offers the smallest files at near-PNG quality.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Can I customize how the output image looks? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes, you have full control over the output. Choose from 8 font families: JetBrains Mono and Fira Code (best for code and structured data — each character occupies equal width, preserving alignment), Inter (clean modern sans-serif for general documents), Lora (elegant serif for formal content), plus system monospace, sans-serif, serif, and cursive fallbacks. Adjust the font size from 10px to 32px, toggle bold and italic text styles. Use the color pickers to set custom background and text colors. And control the padding between text and image edges. All settings update when you re-convert, so you can experiment until the image looks exactly how you want it.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">How large a file can I convert? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">The maximum file size is 10MB, which is more than enough for virtually any text document. For context, a 10MB text file contains roughly 10 million characters — the equivalent of about 3,000 pages of text. The converter renders your file at 800 pixels wide (with height calculated automatically to fit all content) and displays up to 5,000 lines in the output image. This ensures even very large documents like log files, data exports, and full source code repositories capture all important content.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Does this work on mobile phones and tablets? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes, the converter is fully responsive and works on iOS and Android devices. The interface adapts to smaller screens, and since all processing is done in your device's browser, there is no dependency on a server connection after the page loads. You can convert text files to images on the go, even with a slow or intermittent internet connection.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Does the converter support syntax highlighting for code files? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes. When you upload a code file (.js, .ts, .py, .go, .rs, .java, .c, .cpp, .html, .css, .json, .xml, .sh, .sql and 15+ other languages), the converter automatically applies syntax highlighting with VS Code Dark+ theme colors — keywords in blue, strings in orange, comments in green, functions in yellow. No configuration needed. The Text Color setting above controls the default color for non-code text.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What are the recommended settings for the best code images? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">For code: Fira Code or JetBrains Mono at 14-16px, dark background (#1e1e1e) with light text (#e0e0e0), Auto Fit aspect ratio, PNG format. For documents: Inter at 16px, white background, 16:9 aspect ratio. For social media: Fira Code + dark theme + 16:9 + PNG gets the most engagement on Twitter/X and LinkedIn.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">How does Auto Fit work and when should I use it? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Auto Fit automatically calculates the image height based on your content, so every line of your file is captured without truncation. The width is fixed at 800px for readability, and the height expands as needed — up to 5,000 lines. Use Auto Fit for code files, long documents, and any content where you want to ensure nothing gets cut off. For social media posts where a specific aspect ratio matters, use 16:9 or 1:1 instead.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Can I use this converter offline or in a CI/CD pipeline? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Once the page is loaded, all processing is client-side and works without an internet connection. For CI/CD pipelines, use a headless browser (Puppeteer or Playwright) to automate conversion — your code stays within your infrastructure. See our <a href="/api" class="text-emerald-600 hover:underline">API & Automation page</a> for code examples in Node.js and Python.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">How does this compare to other online converters? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">The key differences are privacy, speed, and freedom from limits. Most online converters require you to upload your file to their servers, process it in the cloud, then download the result. This means your documents pass through a third party, file size limits are often restrictive on free tiers, and you may need to create an account or wait in a queue. Our converter runs entirely in your browser — instant results, no account needed, no file uploads, no conversion limits, and complete privacy. For anyone handling sensitive documents, proprietary code, or confidential data, this is a fundamental advantage.</div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <Footer />
+
+  <script type="application/ld+json" is:inline>
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert a TXT file to an image?","acceptedAnswer":{"@type":"Answer","text":"Simply drag and drop your text file onto the upload area or click to browse your computer. Adjust output settings (format, font, colors, padding) and click Convert to Image. The entire process runs in your browser — no file upload, no server processing, no waiting."}},{"@type":"Question","name":"Is this converter really free? Are there any limits?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no hidden costs. No limit on how many files you can convert, no registration required, no premium tiers. The only limit is 10MB per file for browser memory safety."}},{"@type":"Question","name":"Are my files safe? Do they get uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"Your files are completely safe. All processing happens inside your browser using FileReader and Canvas APIs. No data ever leaves your device."}},{"@type":"Question","name":"Does the converter support syntax highlighting for code files?","acceptedAnswer":{"@type":"Answer","text":"Yes. When you upload a code file, the converter automatically applies VS Code Dark+ theme syntax highlighting — keywords in blue, strings in orange, comments in green, functions in yellow. 29 languages supported. No configuration needed."}},{"@type":"Question","name":"What are the recommended settings for the best code images?","acceptedAnswer":{"@type":"Answer","text":"For code: Fira Code or JetBrains Mono at 14-16px, dark background with light text, Auto Fit, PNG. For documents: Inter at 16px, white background, 16:9. For social media: dark theme + 16:9 + PNG."}},{"@type":"Question","name":"How does Auto Fit work and when should I use it?","acceptedAnswer":{"@type":"Answer","text":"Auto Fit calculates image height from content so every line is captured without truncation. Width is fixed at 800px. Use for code files and long documents. For social media, use 16:9 or 1:1 instead."}},{"@type":"Question","name":"How does this compare to other online converters?","acceptedAnswer":{"@type":"Answer","text":"Key differences: client-side privacy (no uploads), no limits, no sign-up, instant results, and full customization including 8 fonts, syntax highlighting, and Auto Fit. Most alternatives require uploading files to their servers with daily limits or paywalls."}}]}
+  </script></Layout>
+
+<script>
+  import '../scripts/generator.js';
+</script>
+
+<div id="generation-status" class="sr-only" role="status" aria-live="polite"></div>
+
+<button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-11 h-11 bg-white border border-zinc-200 rounded-full shadow-md hover:shadow-lg hover:border-emerald-300 opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600"><polyline points="18 15 12 9 6 15"/></svg>
+</button>

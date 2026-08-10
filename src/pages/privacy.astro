@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Privacy Policy — txttoimage | No Data Collection, Client-Side Processing"
+  description="txttoimage privacy policy — your files never leave your device. No data collection, no tracking, no cookies. Learn how our client-side converter protects your privacy."
+  path="/privacy"
+>
+  <section class="min-h-[50dvh] flex flex-col pt-28 pb-12">
+    <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full px-4">
+      <p class="text-sm text-emerald-600 font-medium mb-3"><a href="/" class="hover:underline">txttoimage</a> &rsaquo; Privacy</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">Privacy Policy</h1>
+      <p class="mt-4 text-lg text-zinc-500 leading-relaxed">Last updated: August 2026</p>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-4 prose prose-zinc max-w-none">
+      <h2 class="text-2xl font-bold text-zinc-900 tracking-tight">Our Privacy Commitment</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">txttoimage is designed so that we cannot access your data. The tool processes everything inside your browser using standard Web APIs. We have no servers that receive, store, or process your files.</p>
+
+      <h2 class="text-2xl font-bold text-zinc-900 tracking-tight mt-10">How the Converter Works</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">The txttoimage converter uses two browser APIs: the FileReader API to read your file and the Canvas API to render it as an image. Both operations happen entirely in your browser's local memory. No file content is transmitted over the network at any point. You can verify this at any time by opening your browser's Developer Tools, navigating to the Network tab, and confirming that no data upload occurs.</p>
+
+      <h2 class="text-2xl font-bold text-zinc-900 tracking-tight mt-10">Data Collection</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">We do not collect, store, or process any of the following:</p>
+      <ul class="mt-3 space-y-2 text-zinc-500 list-disc ml-5">
+        <li>File contents — your text files are never uploaded or transmitted</li>
+        <li>Personal information — no registration, no email collection, no user accounts</li>
+        <li>Usage analytics — we do not use Google Analytics, tracking pixels, or any third-party analytics</li>
+        <li>Conversion history — no server-side logging of which files were converted</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-zinc-900 tracking-tight mt-10">Cookies</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">txttoimage does not use cookies for tracking or advertising. The only cookie that may be set is a standard session cookie required for the website to function correctly. No third-party cookies are set.</p>
+
+      <h2 class="text-2xl font-bold text-zinc-900 tracking-tight mt-10">Third-Party Services</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">We load fonts from Google Fonts to improve the visual appearance of the tool. Google Fonts may receive your IP address when the fonts are loaded. No other third-party services are used.</p>
+
+      <h2 class="text-2xl font-bold text-zinc-900 tracking-tight mt-10">Contact</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">If you have questions about this policy or how txttoimage handles privacy, visit our <a href="/contact" class="text-emerald-600 hover:underline">contact page</a>.</p>
+    </div>
+  </section>
+</Layout>

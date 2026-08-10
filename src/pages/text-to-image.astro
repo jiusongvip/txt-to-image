@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageCTA from '../components/PageCTA.astro';
+---
+
+<Layout
+  title="Text to Image — Free Online Text to Image Converter | txttoimage"
+  description="Convert text files to PNG, JPG, or WebP instantly in your browser. Free, private, 100% client-side — no upload, no sign-up. 8 fonts, syntax highlighting, full customization."
+  path="/text-to-image"
+>
+  <section class="min-h-[50dvh] flex flex-col pt-28 pb-12">
+    <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full px-4">
+      <p class="text-sm text-emerald-600 font-medium mb-3"><a href="/" class="hover:underline">txttoimage</a> &rsaquo; Text to Image</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">Text to Image Converter — Free, Private, Instant</h1>
+      <p class="mt-4 text-lg text-zinc-500 leading-relaxed max-w-2xl">Convert any text file — .txt, .md, .csv, .log, .json, .xml and 20+ formats — to clean PNG, JPG, or WebP images. Unlike Convertio, Online-Convert, and other server-based tools, txttoimage processes everything <strong class="text-zinc-700">100% client-side in your browser</strong>. No uploads, no sign-up, instant results. Your files never leave your device.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/#generator" class="bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-medium px-6 py-3 rounded-full transition-all duration-150 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 12h12l-4 8H10l-4-8z"/></svg>
+          Convert Text to Image Now
+        </a>
+        <a href="/compare" class="bg-white border border-zinc-200 hover:border-zinc-300 text-zinc-600 font-medium px-6 py-3 rounded-full transition-all duration-150">See how we compare</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="py-4 bg-white border-b border-zinc-200 sticky top-14 z-40">
+    <div class="max-w-3xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto">
+      <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 shrink-0">On this page:</span>
+      <a href="#why" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Why Client-Side</a>
+      <a href="#how-to" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">How To</a>
+      <a href="#formats" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Formats</a>
+      <a href="#settings" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Settings Guide</a>
+      <a href="#use-cases" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Use Cases</a>
+      <a href="#faq" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">FAQ</a>
+    </div>
+  </nav>
+
+  <!-- Why Client-Side -->
+  <section id="why" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Why Client-Side Text to Image Conversion Matters</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Every major text-to-image converter on the web — Convertio, Online-Convert, FreeConvert, CoolUtils — requires uploading your files to their servers. This has real consequences for privacy, speed, and freedom from limits. txttoimage is fundamentally different: the converter runs entirely in your browser using the HTML5 Canvas and FileReader APIs.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Complete Privacy — Your Files Never Leave Your Device</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">When you use a server-based converter, your text content, source code, configuration files, and documents are uploaded to a third-party server you do not control. With txttoimage, the FileReader API reads your file into browser memory, and the Canvas API renders it as an image — all locally. No network packets containing your file content ever leave your device. This is essential for proprietary source code, confidential business documents, legal materials, and any content you would not upload to a random server.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Instant Conversion — No Upload Queue, No Waiting</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Server-based converters require you to upload the file, wait for cloud processing, and then download the result. With large files or during peak hours, this can take minutes. txttoimage renders your file in under a second because there is no network round-trip. The conversion happens entirely in your browser's rendering engine. The only latency is the time it takes for the Canvas API to draw your text — measured in milliseconds, not seconds.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Full Customization — 8 Fonts, Bold/Italic, Colors, Aspect Ratios</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Most online converters offer zero text styling options — you upload a file and get whatever the server renders. txttoimage gives you complete control: 8 font families including JetBrains Mono and Fira Code for developers, Inter for modern documents, and Lora for formal content. Font sizes from 10px to 32px. Bold and italic toggles. Custom background and text colors. Adjustable padding and 6 aspect ratios. You can experiment freely until the output image looks exactly right.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">No Limits, No Ads, No Sign-Up — Truly Free Forever</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Convertio enforces daily conversion limits on free accounts. CoolUtils uses its online converter to upsell a paid desktop app. Online-Convert shows ads and limits file sizes. txttoimage has none of these restrictions. There is no paid tier, no premium plan, no watermarking, and no registration requirement. Because we do not run any conversion servers, each user's conversion costs us nothing. This makes a permanently free, unlimited tool economically sustainable. The only practical limit is 10MB per file — a browser memory safeguard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How To -->
+  <section id="how-to" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">How to Convert Text to Image — Complete Guide</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">The conversion process takes under 5 seconds from start to finish. You can either upload a text file or type/paste text directly — both methods produce the same high-quality output.</p>
+
+      <div class="mt-8 space-y-10">
+        <div class="bg-white border border-zinc-200 rounded-xl p-7">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">1</span><h3 class="font-semibold text-zinc-900 text-lg">Load Your Content — Upload a File or Type Directly</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed mb-4">You have two input options. <strong>Upload File:</strong> drag and drop any text-based file (.txt, .md, .csv, .log, .json, .xml, .html, .css, .js, .py, and 15+ more) onto the converter area, or click to browse your computer. The file is read locally using the FileReader API — you will see the file name, size, line count, and a preview of the first 2,000 characters. <strong>Type or Paste Text:</strong> switch to the text input tab and type or paste your content directly into the text area. This mode provides a live preview that updates as you type — see exactly how your text will look as an image before you convert.</p>
+          <div class="bg-zinc-50 border border-zinc-100 rounded-lg p-4"><p class="text-xs font-semibold text-zinc-400 uppercase tracking-wide mb-2">Privacy note</p><p class="text-xs text-zinc-500">In both modes, your content never leaves your browser. There is no server upload — the FileReader API reads files into local memory, and the Canvas API renders the image locally.</p></div>
+        </div>
+
+        <div class="bg-white border border-zinc-200 rounded-xl p-7">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">2</span><h3 class="font-semibold text-zinc-900 text-lg">Customize Your Output Image</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed mb-4">Every aspect of the output image is configurable. Adjust these settings before clicking Convert:</p>
+          <div class="space-y-3 mt-3">
+            <div class="flex gap-4"><span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded shrink-0 mt-0.5">Format</span><div><p class="text-sm text-zinc-700 font-medium">PNG, JPG, or WebP</p><p class="text-xs text-zinc-500 mt-0.5">PNG for lossless quality and sharp text (recommended for documentation and code). JPG for smaller files — 50-80% smaller than PNG (best for email and messaging). WebP for the smallest files with near-PNG quality (ideal for websites).</p></div></div>
+            <div class="flex gap-4"><span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded shrink-0 mt-0.5">Font</span><div><p class="text-sm text-zinc-700 font-medium">8 families at 10-32px, with Bold/Italic</p><p class="text-xs text-zinc-500 mt-0.5">JetBrains Mono and Fira Code for developers — perfect monospace rendering. Inter for clean modern documents. Lora for elegant formal content. Plus system monospace, sans-serif, serif, and cursive fallbacks.</p></div></div>
+            <div class="flex gap-4"><span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded shrink-0 mt-0.5">Layout</span><div><p class="text-sm text-zinc-700 font-medium">Padding (20-80px) and aspect ratio (6 options)</p><p class="text-xs text-zinc-500 mt-0.5">16:9 = widescreen (1280×720px) for social media and blog posts. 4:3 = traditional slides (960×720px). 1:1 = square (800×800px) for Instagram. 9:16 = vertical (450×800px) for mobile Stories. 3:2 and 3:4 for photo and portrait orientations.</p></div></div>
+            <div class="flex gap-4"><span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded shrink-0 mt-0.5">Colors</span><div><p class="text-sm text-zinc-700 font-medium">Custom text and background colors</p><p class="text-xs text-zinc-500 mt-0.5">Choose any color via the picker. Popular combos: white bg + near-black text for documents, dark bg (#1e1e1e) + light text (#e0e0e0) for terminal-style code screenshots, or match your brand colors for consistent social media posts.</p></div></div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-zinc-200 rounded-xl p-7">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">3</span><h3 class="font-semibold text-zinc-900 text-lg">Convert and Download Your Image</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed mb-4">Click the green <strong>Convert to Image</strong> button. The converter renders your text onto an HTML5 Canvas at the exact pixel dimensions of your chosen aspect ratio, with automatic word wrapping to fit the image width. The result appears instantly — no upload wait, no server processing time, no download queue.</p>
+          <p class="text-sm text-zinc-500 leading-relaxed mb-4">Preview the image to make sure everything looks right, then click <strong>Download Image</strong> to save it to your device. The downloaded file keeps your original file name with the new extension (.png, .jpg, or .webp). If you want to try different settings, adjust them and click Convert again — the file stays in memory until you click Remove.</p>
+          <div class="bg-zinc-50 border border-zinc-100 rounded-lg p-4"><p class="text-xs font-semibold text-zinc-400 uppercase tracking-wide mb-2">Pro tip</p><p class="text-xs text-zinc-500">On high-DPI (Retina) screens, the converter renders at 2× resolution internally, producing sharp text even at small font sizes. The downloaded image preserves this high resolution.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Formats -->
+  <section id="formats" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">What Text Formats Can You Convert to Image?</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Our converter accepts 20+ text-based file formats. Any file that can be opened in a text editor can be converted. The converter reads raw text content — it does not parse or interpret the file format, so your text is rendered exactly as it appears in the file.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white border border-zinc-200 rounded-xl p-5"><h3 class="text-sm font-semibold text-zinc-900 mb-3">Plain Text & Documents</h3><div class="flex flex-wrap gap-1.5"><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.txt</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.text</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.log</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.md</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.markdown</code></div></div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5"><h3 class="text-sm font-semibold text-zinc-900 mb-3">Structured Data</h3><div class="flex flex-wrap gap-1.5"><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.csv</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.json</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.xml</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.yml</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.yaml</code></div></div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5"><h3 class="text-sm font-semibold text-zinc-900 mb-3">Configuration Files</h3><div class="flex flex-wrap gap-1.5"><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.cfg</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.ini</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.conf</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.env</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.toml</code></div></div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5"><h3 class="text-sm font-semibold text-zinc-900 mb-3">Web & Markup</h3><div class="flex flex-wrap gap-1.5"><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.html</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.css</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.svg</code></div></div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5"><h3 class="text-sm font-semibold text-zinc-900 mb-3">Programming Languages</h3><div class="flex flex-wrap gap-1.5"><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.js</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.ts</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.py</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.java</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.c</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.cpp</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.go</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.rs</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.rb</code></div></div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5"><h3 class="text-sm font-semibold text-zinc-900 mb-3">Scripts & SQL</h3><div class="flex flex-wrap gap-1.5"><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.sh</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.bat</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.ps1</code><code class="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-md">.sql</code></div></div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <p class="w-full text-sm text-zinc-500 mb-1">Dedicated guides for popular formats:</p>
+        <a href="/txt-to-png" class="bg-white border border-zinc-200 rounded-xl p-4 hover:border-emerald-300 transition-colors text-center min-w-[120px]"><span class="block text-sm font-semibold text-zinc-800">TXT to PNG</span><span class="block text-xs text-zinc-400 mt-1">Lossless quality</span></a>
+        <a href="/txt-to-jpg" class="bg-white border border-zinc-200 rounded-xl p-4 hover:border-emerald-300 transition-colors text-center min-w-[120px]"><span class="block text-sm font-semibold text-zinc-800">TXT to JPG</span><span class="block text-xs text-zinc-400 mt-1">Smaller files</span></a>
+        <a href="/code-to-image" class="bg-white border border-zinc-200 rounded-xl p-4 hover:border-emerald-300 transition-colors text-center min-w-[120px]"><span class="block text-sm font-semibold text-zinc-800">Code to Image</span><span class="block text-xs text-zinc-400 mt-1">15+ languages</span></a>
+        <a href="/csv-to-image" class="bg-white border border-zinc-200 rounded-xl p-4 hover:border-emerald-300 transition-colors text-center min-w-[120px]"><span class="block text-sm font-semibold text-zinc-800">CSV to Image</span><span class="block text-xs text-zinc-400 mt-1">Data exports</span></a>
+        <a href="/md-to-image" class="bg-white border border-zinc-200 rounded-xl p-4 hover:border-emerald-300 transition-colors text-center min-w-[120px]"><span class="block text-sm font-semibold text-zinc-800">MD to Image</span><span class="block text-xs text-zinc-400 mt-1">Markdown files</span></a>
+        <a href="/log-to-image" class="bg-white border border-zinc-200 rounded-xl p-4 hover:border-emerald-300 transition-colors text-center min-w-[120px]"><span class="block text-sm font-semibold text-zinc-800">Log to Image</span><span class="block text-xs text-zinc-400 mt-1">Server logs</span></a>
+        <a href="/json-to-image" class="bg-white border border-zinc-200 rounded-xl p-4 hover:border-emerald-300 transition-colors text-center min-w-[120px]"><span class="block text-sm font-semibold text-zinc-800">JSON to Image</span><span class="block text-xs text-zinc-400 mt-1">Structured data</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Settings Guide -->
+  <section id="settings" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Understanding the Output Settings for Best Results</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Each setting affects the quality, file size, and compatibility of your output image. Here is what matters and when to use each option.</p>
+
+      <div class="mt-8 space-y-5">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">PNG vs JPG vs WebP — Which Output Format to Choose</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed"><strong>PNG:</strong> lossless compression, perfect text sharpness, 200-600KB per image at 1280×720. Use for documentation, code sharing, archival, and any scenario where text clarity matters. <strong>JPG:</strong> lossy compression, 80-200KB per image, 50-80% smaller than PNG. Use for email attachments, messaging apps, and social media where file size matters more than pixel-perfect quality. <strong>WebP:</strong> modern format with both lossless and lossy modes, 60-250KB per image. Best for web embedding. Note that some older email clients cannot display WebP.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Font Selection — Matching Font to Content Type</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed"><strong>JetBrains Mono / Fira Code:</strong> developer-grade monospace fonts with programming ligatures. Use for source code, configuration files, logs, CSV data, and any content requiring column alignment. <strong>Inter:</strong> clean, highly readable sans-serif designed for screens. Use for general documents, reports, and any text meant for reading. <strong>Lora:</strong> elegant serif with a traditional feel. Use for formal documents, literary content, and academic papers. <strong>System fonts:</strong> available as fallbacks when custom fonts are still loading.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Aspect Ratio Guide — Choosing the Right Dimensions</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed"><strong>16:9 (1280×720):</strong> standard widescreen — best for Twitter/X posts, LinkedIn, blog embeds, and general sharing. <strong>4:3 (960×720):</strong> traditional slide format — use for PowerPoint and Google Slides embeds. <strong>1:1 (800×800):</strong> square format — optimal for Instagram posts and profile images. <strong>9:16 (450×800):</strong> vertical format — use for Instagram Stories, TikTok, and mobile-first content. <strong>3:2 (900×600):</strong> photo ratio — good for presentations and document previews. <strong>3:4 (600×800):</strong> portrait document — use for longer text content that benefits from vertical space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section id="use-cases" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Common Text to Image Use Cases</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Thousands of people use txttoimage daily. These are the most common scenarios and the recommended settings for each.</p>
+
+      <div class="mt-8 space-y-5">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-3"><div class="w-9 h-9 bg-violet-50 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3 class="font-semibold text-zinc-900">Sharing Code on Social Media</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Twitter/X, LinkedIn, and other platforms strip code formatting. Converting source files to images preserves indentation, comments, and structure. <strong>Recommended:</strong> Fira Code or JetBrains Mono at 14-16px, dark background (#1e1e1e) with light text (#e0e0e0), 16:9 aspect ratio, PNG format. See our <a href="/code-to-image" class="text-emerald-600 hover:underline">code-to-image guide</a> for more.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-3"><div class="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" x2="21" y1="9" y2="9"/><line x1="3" x2="21" y1="15" y2="15"/></svg></div><h3 class="font-semibold text-zinc-900">Embedding Data Tables in Presentations</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">CSV exports and structured data paste poorly into PowerPoint and Google Slides. Converting to images preserves column alignment and prevents formatting breakage. <strong>Recommended:</strong> monospace font at 10-12px, white background, 4:3 or 16:9 to match slides, PNG format. <a href="/csv-to-image" class="text-emerald-600 hover:underline">CSV to image guide</a>.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-3"><div class="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3 class="font-semibold text-zinc-900">Sharing Document Drafts for Review</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">When sharing content drafts with editors, clients, or stakeholders who may not have the right tools to open raw files, converting to an image ensures everyone sees the same thing. Markdown drafts become universally viewable. <strong>Recommended:</strong> Inter at 16px, white background, 40-60px padding, JPG for email, PNG for formal review.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-3"><div class="w-9 h-9 bg-red-50 rounded-lg flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="font-semibold text-zinc-900">Sensitive Business Documents</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">For legal documents, financial reports, and confidential materials, the client-side nature of txttoimage is essential. Your content never passes through any server — conversion happens entirely on your device. This meets SOC 2, HIPAA, and GDPR compliance requirements that server-based converters cannot satisfy. <strong>Recommended:</strong> Serif font at 14-16px for formal documents, PNG for archival quality, 40-60px padding.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
+      <p class="mt-4 text-zinc-500">Answers to the most common questions about our text to image converter.</p>
+
+      <dl class="mt-8 space-y-1">
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What file formats can I convert to an image? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Over 20 text-based formats: .txt, .md, .csv, .log, .json, .xml, .yml, .yaml, .cfg, .ini, .conf, .env, .toml, .html, .css, and source code from 13+ programming languages including .js, .ts, .py, .go, .java, .c, .cpp, .rs. Any file that can be opened in a text editor can be converted.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Is the text to image converter really free? What are the limits? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes, completely free with no hidden costs. There is no daily conversion limit, no registration requirement, no premium tier, and no watermarks. The only limit is 10MB per file — a browser memory safeguard, not a business restriction. Because all processing happens in your browser, we incur no server costs per conversion.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Are my text files secure? Where does the data go? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Your data goes nowhere — it stays entirely on your device. The conversion happens in your browser using the FileReader API (to read the file) and Canvas API (to render the image). No file content is ever transmitted over the network. You can verify this by opening your browser's Developer Tools (F12), going to the Network tab, and confirming no data upload occurs. This is fundamentally different from Convertio, Online-Convert, FreeConvert, and all other server-based converters.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Can I type or paste text instead of uploading a file? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes. Switch to the "Type or Paste Text" tab and enter your content directly. This mode includes a live preview that updates in real time as you type — you can see exactly how your text will look as an image before converting. This is perfect for short snippets, quotes, or text you want to compose directly in the tool.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What image formats can I export? Which should I choose? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">PNG (lossless, sharp text, 200-600KB — recommended for documentation and code), JPG (lossy, compact, 80-200KB — best for email and messaging), or WebP (modern, smallest size, 60-250KB — ideal for web embedding). PNG is the right choice 90% of the time for text content. See our <a href="/txt-to-png" class="text-emerald-600 hover:underline">PNG guide</a> for a detailed comparison.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">How does txttoimage compare to Convertio and other online converters? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">The key difference is architecture: txttoimage is client-side, Convertio and others are server-side. This means (1) your files never leave your device with txttoimage, (2) conversion is instant with no upload queue, and (3) there are no daily limits, paywalls, or forced sign-ups. For text-to-image specifically, txttoimage also offers far more customization — 8 fonts, bold/italic, custom colors, padding, and 6 aspect ratios. Most server-based converters offer zero text styling. See our <a href="/compare" class="text-emerald-600 hover:underline">full comparison</a>.</div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-lg font-semibold text-zinc-500 uppercase tracking-wide">Related Pages</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="/txt-to-png" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">TXT to PNG</a>
+        <a href="/txt-to-jpg" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">TXT to JPG</a>
+        <a href="/code-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Code to Image</a>
+        <a href="/how-it-works" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">How It Works</a>
+        <a href="/compare" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Compare Tools</a>
+        <a href="/" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Home</a>
+      </div>
+    </div>
+  </section>
+
+  <PageCTA title="Convert Text to Image Now" description="Drop any text file and get a clean, shareable image in seconds. No uploads, no sign-up, no limits." buttonText="Convert Text to Image" />
+
+  <script type="application/ld+json" is:inline>
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What file formats can I convert to an image?","acceptedAnswer":{"@type":"Answer","text":"Over 20 text-based formats including .txt, .md, .csv, .log, .json, .xml, .yml, .yaml, .cfg, .ini, .conf, .env, .toml, .html, .css, and source code from 13+ programming languages like .js, .ts, .py, .go, .java."}},{"@type":"Question","name":"Is the text to image converter really free? What are the limits?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no hidden costs. No daily conversion limit, no registration, no premium tier, no watermarks. The only limit is 10MB per file — a browser memory safeguard. Because all processing is client-side, we incur no server costs."}},{"@type":"Question","name":"Are my text files secure? Where does the data go?","acceptedAnswer":{"@type":"Answer","text":"Your data stays entirely on your device. Conversion uses FileReader and Canvas APIs in your browser. No file content ever leaves your device. This is fundamentally different from Convertio, Online-Convert, and all other server-based converters."}},{"@type":"Question","name":"Can I type or paste text instead of uploading a file?","acceptedAnswer":{"@type":"Answer","text":"Yes. Switch to the Type or Paste Text tab to enter content directly with live preview that updates in real time as you type."}},{"@type":"Question","name":"What image formats can I export? Which should I choose?","acceptedAnswer":{"@type":"Answer","text":"PNG for lossless quality and sharp text (recommended), JPG for smaller files good for email and messaging, or WebP for web embedding. PNG is the right choice 90% of the time for text content."}},{"@type":"Question","name":"How does txttoimage compare to Convertio and other online converters?","acceptedAnswer":{"@type":"Answer","text":"Key difference: txttoimage is client-side, others are server-side. Your files never leave your device, conversion is instant with no upload queue, no daily limits, no paywalls. txttoimage also offers far more customization: 8 fonts, bold/italic, custom colors, padding, and 6 aspect ratios."}}]}
+  </script>
+</Layout>

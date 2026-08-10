@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageCTA from '../components/PageCTA.astro';
+---
+
+<Layout
+  title="JSON to Image — Convert JSON Files to PNG/JPG Online | txttoimage"
+  description="Convert JSON files to clean PNG or JPG images. Share API responses and config data as visual snapshots. Free, private, client-side. Indentation preserved, no upload."
+  path="/json-to-image"
+>
+  <section class="min-h-[50dvh] flex flex-col pt-28 pb-12">
+    <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full px-4">
+      <p class="text-sm text-emerald-600 font-medium mb-3"><a href="/" class="hover:underline">txttoimage</a> &rsaquo; JSON to Image</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">JSON to Image Converter — Share Structured Data Without Raw Files</h1>
+      <p class="mt-4 text-lg text-zinc-500 leading-relaxed max-w-2xl">Convert .json files to clean, readable PNG or JPG images. Share API responses, configuration data, and structured documents as visual snapshots — no JSON viewer needed. 100% client-side processing means your data never leaves your device.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/#generator" class="bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-medium px-6 py-3 rounded-full transition-all duration-150 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" x2="21" y1="9" y2="9"/></svg>
+          Convert JSON to Image Now
+        </a>
+        <a href="/csv-to-image" class="bg-white border border-zinc-200 hover:border-zinc-300 text-zinc-600 font-medium px-6 py-3 rounded-full transition-all duration-150">CSV to Image</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="py-4 bg-white border-b border-zinc-200 sticky top-14 z-40">
+    <div class="max-w-3xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto">
+      <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 shrink-0">On this page:</span>
+      <a href="#why" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Why JSON to Image</a>
+      <a href="#how-to" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">How To</a>
+      <a href="#best-practices" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Best Practices</a>
+      <a href="#faq" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">FAQ</a>
+    </div>
+  </nav>
+
+  <!-- Why JSON to Image -->
+  <section id="why" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Why Convert JSON to Image?</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">JSON is the universal data interchange format — every API, configuration system, and modern application uses it. But sharing raw JSON files has real problems. Converting JSON to images solves them all while keeping your data private.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Share API Responses Without Sending Raw Data</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">When debugging API integrations with teammates, sending raw JSON files creates friction — recipients need a JSON viewer or IDE to read them. Converting API responses to images lets everyone see the exact response structure instantly, on any device. This is especially useful in Slack threads, Jira tickets, and documentation.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Document Configuration Files in Your Wiki</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Including JSON configuration examples in Confluence, Notion, or GitHub wikis as images ensures readers see the exact structure without copy-paste errors. Unlike pasted text that loses formatting, an image freezes the JSON as a permanent, reliable reference. Updates are intentional — preventing accidental modifications.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Privacy — Your Data Never Leaves Your Device</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">JSON files often contain sensitive information — API keys, user data, internal hostnames, and business logic. With txttoimage, your JSON is converted entirely in your browser using the FileReader and Canvas APIs. No data is ever uploaded to any server. This is critical for production configuration files, API responses from internal services, and any JSON containing credentials or PII.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Perfect Indentation and Nesting Preservation</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Monospace fonts (JetBrains Mono, Fira Code) ensure every character occupies the same width. JSON indentation, nesting levels, and key-value alignment are all perfectly preserved in the output image. Sans-serif and serif fonts have variable-width characters and will misalign JSON structures — always use monospace for data formats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How To -->
+  <section id="how-to" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">How to Convert JSON to Image — Step-by-Step</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Converting a JSON file to a clean, readable image takes under 5 seconds. Here is the recommended workflow for the best results.</p>
+
+      <div class="mt-8 space-y-8">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">1</span><h3 class="font-semibold text-zinc-900 text-lg">Drop Your .json File</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Drag and drop any .json file onto the converter. The file is read locally by your browser — no upload. If your JSON is minified (single line), consider pretty-printing it first with a tool like <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">jq</code> or your IDE's format command. Well-formatted JSON with proper indentation produces the most readable images.</p>
+        </div>
+
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">2</span><h3 class="font-semibold text-zinc-900 text-lg">Configure for JSON Data</h3></div>
+          <ul class="space-y-2 text-sm text-zinc-500 ml-4 list-disc">
+            <li><strong>Font:</strong> JetBrains Mono or Fira Code — <em>essential</em> for JSON. These monospace fonts ensure every character is the same width, preserving indentation and key-value alignment.</li>
+            <li><strong>Font size:</strong> 12-14px for dense JSON with deep nesting. 16px for shorter API response examples shared in documentation.</li>
+            <li><strong>Colors:</strong> white background with dark text for documentation and API references. Dark background (#1e1e1e) with light text (#e0e0e0) for developer-focused content and social media.</li>
+            <li><strong>Padding:</strong> 30-50px — enough to frame the JSON without wasting space.</li>
+            <li><strong>Format:</strong> PNG for lossless quality — sharp text at any zoom level. JPG compression artifacts are most visible on the high-contrast edges of characters like <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">{</code>, <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">}</code>, and <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">:</code>.</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">3</span><h3 class="font-semibold text-zinc-900 text-lg">Download and Share</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Click Convert to Image and preview the result. Your JSON renders with perfect monospace alignment. Download as PNG for documentation, JPG for quick sharing in chat apps. The image is ready to embed in wikis, tickets, presentations, or anywhere you need to communicate structured data visually.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Practices -->
+  <section id="best-practices" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Best Practices for JSON Images</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Getting the most readable JSON images requires a few intentional choices. These recommendations come from real-world use by developers and technical writers.</p>
+
+      <div class="mt-8 space-y-5">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Always Pretty-Print Before Converting</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Minified JSON on a single line is nearly unreadable as an image. Use <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">python -m json.tool file.json</code>, <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">jq . file.json</code>, or your IDE's format command to add proper indentation before converting. This single step transforms an unreadable wall of text into a clear, scannable data structure.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Extract Relevant Sections for Large Files</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">For large JSON files (package.json from a monorepo, OpenAPI specs, AWS IAM policies), extract only the relevant section before converting. Use <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">jq '.path.to.key' file.json</code> to pull out the specific subtree you need. A 50-line excerpt is far more useful in documentation than a 2,000-line dump.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Sanitize Sensitive Values Before Sharing</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Even though txttoimage processes everything client-side, if you plan to share the resulting image publicly, redact sensitive values first. Replace API keys with <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">"sk-..."</code>, passwords with <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">"********"</code>, and real user data with placeholder values. The image will still communicate the structure effectively.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Consistent Settings Across Documentation</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">When creating multiple JSON images for the same documentation set, use identical settings — same font, same size, same colors, same padding, same aspect ratio. Consistency signals professionalism and makes your documentation feel cohesive. Create all JSON images in one sitting with the same configuration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
+      <p class="mt-4 text-zinc-500">Common questions about converting JSON and structured data to images.</p>
+
+      <dl class="mt-8 space-y-1">
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Will JSON indentation be preserved in the image? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes — but only with a monospace font. JetBrains Mono and Fira Code ensure every character occupies identical width, so JSON indentation, nesting levels, and key-value alignment are perfectly preserved. Sans-serif and serif fonts have variable-width characters that will misalign JSON structures.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Is my JSON data secure during conversion? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Absolutely. Your JSON files are processed entirely within your browser using the FileReader and Canvas APIs. No data is ever uploaded to any server. This is critical for API responses, configuration files, and any JSON containing sensitive data like API keys, user information, or proprietary business logic.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What are the best settings for JSON images? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Use JetBrains Mono or Fira Code at 12-14px for dense data. White background with dark text for documentation, dark background (#1e1e1e) with light text (#e0e0e0) for developer content. PNG format for lossless quality. 16:9 aspect ratio for broad compatibility.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Should I use PNG or JPG for JSON images? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Always PNG for JSON. The high-contrast edges of JSON syntax characters (<code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">{ } [ ] : ,</code>) are exactly where JPG compression artifacts are most visible. PNG's lossless compression keeps these characters razor-sharp at any zoom level. JPG is acceptable only if you need to email many JSON images and file size is a genuine concern.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Can I convert minified JSON to a readable image? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Technically yes, but the result will be difficult to read. Minified JSON converts to an image with all content on one very long wrapped line. We strongly recommend pretty-printing your JSON first — use <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">python -m json.tool file.json</code> or <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">jq . file.json</code> to add proper indentation before converting. The output image will be dramatically more readable.</div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-lg font-semibold text-zinc-500 uppercase tracking-wide">Related Converters</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="/csv-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">CSV to Image</a>
+        <a href="/md-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Markdown to Image</a>
+        <a href="/code-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Code to Image</a>
+        <a href="/txt-to-png" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">TXT to PNG</a>
+        <a href="/log-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Log to Image</a>
+        <a href="/" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">All Converters</a>
+      </div>
+    </div>
+  </section>
+
+  <PageCTA title="Convert Your JSON to an Image" description="Drop a .json file and get a clean, readable image. No uploads, 100% private." buttonText="Convert JSON to Image" />
+
+  <script type="application/ld+json" is:inline>
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Will JSON indentation be preserved in the image?","acceptedAnswer":{"@type":"Answer","text":"Yes — but only with a monospace font. JetBrains Mono and Fira Code ensure every character occupies identical width, so JSON indentation, nesting levels, and key-value alignment are perfectly preserved."}},{"@type":"Question","name":"Is my JSON data secure during conversion?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Your JSON files are processed entirely within your browser using the FileReader and Canvas APIs. No data is ever uploaded to any server."}},{"@type":"Question","name":"What are the best settings for JSON images?","acceptedAnswer":{"@type":"Answer","text":"Use JetBrains Mono or Fira Code at 12-14px. White background for documentation, dark background for developer content. PNG format for lossless quality. 16:9 aspect ratio."}},{"@type":"Question","name":"Should I use PNG or JPG for JSON images?","acceptedAnswer":{"@type":"Answer","text":"Always PNG for JSON. JPG compression artifacts are most visible on JSON syntax characters. PNG's lossless compression keeps characters razor-sharp."}},{"@type":"Question","name":"Can I convert minified JSON to a readable image?","acceptedAnswer":{"@type":"Answer","text":"Technically yes, but we strongly recommend pretty-printing first using python -m json.tool or jq to add proper indentation before converting."}}]}
+  </script>
+</Layout>

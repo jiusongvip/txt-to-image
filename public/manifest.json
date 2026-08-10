@@ -1,0 +1,10 @@
+{
+  "name": "txttoimage - Free TXT to Image Converter",
+  "short_name": "txttoimage",
+  "description": "Convert text files to PNG, JPG, WebP images. Free, private, client-side processing.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#10b981",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

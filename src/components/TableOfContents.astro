@@ -1,0 +1,46 @@
+<nav class="py-6 bg-white border-b border-zinc-200 sticky top-14 z-40 backdrop-blur-sm bg-white/90">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-hide">
+      <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 shrink-0">Jump to:</span>
+      <a href="#generator" class="toc-link shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Converter</a>
+      <a href="#features" class="toc-link shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Why Us</a>
+      <a href="#how-it-works" class="toc-link shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">How To</a>
+      <a href="#formats" class="toc-link shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Formats</a>
+      <a href="#faq" class="toc-link shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+<script>
+  const tocLinks = document.querySelectorAll('.toc-link');
+  const sections = Array.from(tocLinks).map(link => {
+    const id = link.getAttribute('href')?.replace('#', '');
+    return id ? document.getElementById(id) : null;
+  }).filter(Boolean);
+
+  function updateActiveToc() {
+    let current = '';
+    sections.forEach(section => {
+      if (section && section.getBoundingClientRect().top <= 120) {
+        current = section.id;
+      }
+    });
+    tocLinks.forEach(link => {
+      const id = link.getAttribute('href')?.replace('#', '');
+      if (id === current) {
+        link.classList.add('text-emerald-600', 'bg-emerald-50', 'border-emerald-200');
+        link.classList.remove('text-zinc-500', 'bg-zinc-50', 'border-zinc-200');
+      } else {
+        link.classList.remove('text-emerald-600', 'bg-emerald-50', 'border-emerald-200');
+        link.classList.add('text-zinc-500', 'bg-zinc-50', 'border-zinc-200');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+</script>

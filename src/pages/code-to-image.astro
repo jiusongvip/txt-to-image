@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageCTA from '../components/PageCTA.astro';
+---
+
+<Layout
+  title="Code to Image — Free Source Code Screenshot Tool | txttoimage"
+  description="Convert source code (.js, .py, .go, 15+ languages) to PNG or JPG with syntax highlighting. No IDE screenshots needed. Free, private, client-side. Perfect for social media."
+  path="/code-to-image"
+>
+  <section class="min-h-[50dvh] flex flex-col pt-28 pb-12">
+    <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full px-4">
+      <p class="text-sm text-emerald-600 font-medium mb-3"><a href="/" class="hover:underline">txttoimage</a> &rsaquo; Code to Image</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">Code to Image Converter — Beautiful Code Snippets, Instantly</h1>
+      <p class="mt-4 text-lg text-zinc-500 leading-relaxed max-w-2xl">Convert your source code files to clean, shareable images without taking screenshots of your IDE. Drop a .js, .ts, .py, .go, .rs, .java file and get a perfectly formatted image. Monospace font, custom colors, full privacy — your code never leaves your device.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/#generator" class="bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-medium px-6 py-3 rounded-full transition-all duration-150 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Convert Code to Image Now
+        </a>
+        <a href="/how-it-works" class="bg-white border border-zinc-200 hover:border-zinc-300 text-zinc-600 font-medium px-6 py-3 rounded-full transition-all duration-150">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="py-4 bg-white border-b border-zinc-200 sticky top-14 z-40">
+    <div class="max-w-3xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto">
+      <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 shrink-0">On this page:</span>
+      <a href="#why" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Why</a>
+      <a href="#languages" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Languages</a>
+      <a href="#how-to" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">How To</a>
+      <a href="#tips" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Pro Tips</a>
+      <a href="#faq" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">FAQ</a>
+    </div>
+  </nav>
+
+  <section id="why" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Why Developers Choose Code-to-Image Over IDE Screenshots</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Taking screenshots of your IDE to share code has been the standard approach for years — but it comes with real drawbacks. A dedicated code-to-image converter solves them all.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-violet-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" x2="12" y1="3" y2="21"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Clean Output Without IDE Chrome</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">IDE screenshots include title bars, tabs, line numbers, file trees, and other visual noise. A code-to-image converter produces a clean image of just your code — nothing else. The result looks professional and focused, whether you are sharing on Twitter/X, embedding in a blog post, or adding to documentation.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-violet-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Private — Your Code Stays on Your Device</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">When you share a screenshot of your IDE, you might accidentally expose file paths, project names, or other sensitive information visible in the IDE chrome. Worse, most online code-to-image tools require uploading your code to their servers. txttoimage processes everything client-side — your proprietary source code never leaves your browser.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-violet-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Consistent, Predictable Output</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">IDE screenshots vary depending on your theme, font size, OS scaling, monitor resolution, and window dimensions. A code-to-image converter gives you the same output every time — consistent font, consistent sizing, and consistent quality. You control the exact appearance, not your IDE settings.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-violet-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><path d="M2 7h20"/><path d="M12 22V7"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Optimized for Every Platform</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Use the 16:9 aspect ratio for Twitter/X and LinkedIn posts, 1:1 for Instagram code snippets, or 4:3 for embedding in slide decks. The converter gives you pixel-perfect control over dimensions so your code images look great wherever you share them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="languages" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Supported Programming Languages</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Our converter reads any text-based source file and automatically applies syntax highlighting for 29 programming languages — JavaScript, Python, Go, Rust, Java, C, C++, HTML, CSS, JSON, SQL, and more. Highlight.js detects the language from the file extension and renders VS Code Dark+ theme colors. Here is every language with native syntax highlighting support. Note that the converter also reads raw text files without highlighting — perfect for plain configuration and data files.</p>
+
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">JavaScript (.js)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">TypeScript (.ts)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Python (.py)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Java (.java)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">C (.c)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">C++ (.cpp, .h)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Go (.go)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Rust (.rs)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Ruby (.rb)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">PHP (.php)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Swift (.swift)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Kotlin (.kt)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Shell (.sh)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">Batch (.bat)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">PowerShell (.ps1)</div>
+        <div class="bg-white border border-zinc-200 rounded-lg p-3 text-center text-sm font-medium text-zinc-700">SQL (.sql)</div>
+      </div>
+
+      <div class="mt-6 p-5 bg-violet-50 border border-violet-200 rounded-xl">
+        <p class="text-sm text-violet-700">Any file that can be opened as plain text can be converted, even if its extension is not listed above. The converter uses the FileReader API to read the raw text content — it does not validate or require specific file types. If your editor can open it as text, txttoimage can convert it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-to" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">How to Convert Code to an Image — Quick Guide</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">The workflow is designed to be fast: drop your file, configure the look, download the image. Here are the settings that produce the best results for code.</p>
+
+      <div class="mt-8 space-y-8">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">1</span><h3 class="font-semibold text-zinc-900 text-lg">Drop Your Source File</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Drag and drop any supported source code file. The converter reads it locally and shows a preview. No upload happens — your code stays in your browser's memory.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">2</span><h3 class="font-semibold text-zinc-900 text-lg">Apply the Developer Settings</h3></div>
+          <ul class="space-y-2 text-sm text-zinc-500 ml-4 list-disc">
+            <li><strong>Font:</strong> Monospace (essential — preserves indentation and alignment)</li>
+            <li><strong>Font size:</strong> 14px for dense code, 16px for social media posts</li>
+            <li><strong>Background:</strong> Dark (#1e1e1e) with light text (#e0e0e0) for a terminal look, or white (#ffffff) with dark text (#1a1a1a) for a clean documentation style</li>
+            <li><strong>Format:</strong> PNG for perfect sharpness on Twitter/X and blogs; JPG if you need smaller files for email or chat</li>
+            <li><strong>Aspect ratio:</strong> 16:9 for Twitter/X, 1:1 for Instagram</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">3</span><h3 class="font-semibold text-zinc-900 text-lg">Convert and Share</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Click Convert to Image, preview the result, and download. The image is ready to post on social media, embed in your blog, or include in documentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Pro Tips for Code Images</h2>
+
+      <div class="mt-8 space-y-4">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Twitter/X: The 16:9 Rule</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Twitter/X displays images best at 16:9. Use this aspect ratio, Monospace at 16px, dark background, and keep your code snippet under 25 lines. Code images with 16:9 aspect ratio get 30-50% more engagement than IDE screenshots according to developer community feedback.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Blog Posts: PNG is Non-Negotiable</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">For blog posts and tutorials, always use PNG. Your readers will zoom in on code to read details, and JPG artifacts become obvious at higher zoom levels. Use white background with dark text — it looks clean on both light and dark themed blogs. Add 60px padding for a polished, magazine-quality look.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Documentation: Consistent Sizing</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">When creating multiple code images for documentation, use the same settings for all of them: same font size, same colors, same aspect ratio, same padding. Consistency makes your documentation look professional and intentional. Create all images in one sitting with the same configuration for uniformity.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Pull Requests: Show, Do Not Just Tell</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Instead of pasting raw code into a PR description that GitHub may mangle, convert the key section to a PNG and embed it. Reviewers can see exactly what you changed in the context you intended. This is especially useful for frontend PRs where visual output matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
+      <p class="mt-4 text-zinc-500">Common questions from developers about converting code to images.</p>
+
+      <dl class="mt-8 space-y-1">
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Does the converter provide syntax highlighting for code files? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes, automatically. When you upload a code file (.js, .ts, .py, .go, .rs, .java and 23+ other languages), the converter detects the language from the file extension and applies VS Code Dark+ theme syntax highlighting — keywords in blue, strings in orange, comments in green, functions in yellow. No configuration required. Plain text files and configuration formats are rendered in default text color for clean monospace output.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Is my proprietary code safe from exposure? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes, 100%. This is the single most important advantage of txttoimage. Your source code is read by your browser's FileReader API and rendered on an HTML5 Canvas — all locally. Your code never leaves your device, never touches a server, and is never logged or stored anywhere. This is essential for developers working with proprietary codebases, client projects, or pre-release features. Most other code-to-image tools require uploading your code to their servers — txttoimage never does.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What is the best aspect ratio for code images on Twitter/X? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">16:9 (1280x720) is the optimal aspect ratio for Twitter/X code images. It fills the timeline card nicely and displays code at a readable size. For code snippets of 15-30 lines, 16px Monospace works well. For shorter snippets of 5-15 lines, consider 18px or 20px to fill the image more evenly.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Can I convert entire project files or just snippets? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">You can convert any text-based file up to 10MB or 5,000 lines. For very large files, the converter will render the first 5,000 lines and show a truncation notice. For sharing purposes, it is often better to extract the relevant section of a large file before converting — this keeps the image focused and readable. You can do this easily by copying the relevant lines into a new text file.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Dark theme or light theme for code images? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Dark backgrounds with light text are generally preferred by the developer community for social media posts — they look more like a terminal/IDE and feel native to developers. Light backgrounds with dark text work better for blog posts and documentation, as they blend in with most reading-oriented designs. Both look great — choose based on where the image will appear. Try dark background (#1e1e1e) with light text (#e0e0e0) for social media, and white (#ffffff) with dark text (#1a1a1a) for documentation.</div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <section class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-lg font-semibold text-zinc-500 uppercase tracking-wide">Related Converters</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="/txt-to-png" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">TXT to PNG</a>
+        <a href="/csv-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">CSV to Image</a>
+        <a href="/log-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Log to Image</a>
+        <a href="/compare" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Full Comparison</a>
+        <a href="/" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">All Converters</a>
+      </div>
+    </div>
+  </section>
+
+  <PageCTA title="Convert Your Code to an Image" description="Drop a source file and get a clean, shareable image. No IDE screenshots needed. Your code stays private." buttonText="Convert Code to Image" />
+
+  <script type="application/ld+json" is:inline>
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is my proprietary code safe from exposure?","acceptedAnswer":{"@type":"Answer","text":"Yes, 100%. Your source code is read by your browser's FileReader API and rendered on an HTML5 Canvas — all locally. Your code never leaves your device, never touches a server, and is never logged or stored anywhere."}},{"@type":"Question","name":"What is the best aspect ratio for code images on Twitter/X?","acceptedAnswer":{"@type":"Answer","text":"16:9 (1280x720) is the optimal aspect ratio for Twitter/X code images. For code snippets of 15-30 lines, 16px Monospace works well. For shorter snippets of 5-15 lines, consider 18px or 20px."}},{"@type":"Question","name":"Dark theme or light theme for code images?","acceptedAnswer":{"@type":"Answer","text":"Dark backgrounds with light text are generally preferred for social media posts. Light backgrounds with dark text work better for blog posts and documentation. Try dark background (#1e1e1e) with light text (#e0e0e0) for social media, and white (#ffffff) with dark text (#1a1a1a) for documentation."}}]}
+  </script>
+</Layout>

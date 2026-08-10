@@ -1,0 +1,46 @@
+# txt-to-image.com — LLMs.txt
+# Free, private, client-side text-to-image converter
+
+## Overview
+txt-to-image.com is a free online tool that converts text files (.txt, .md, .csv, .log, .json, .xml, and 20+ formats) to PNG, JPG, or WebP images. Unlike Convertio, Online-Convert, and other server-based tools, txttoimage processes everything 100% client-side — files never leave the user's device.
+
+## Key Pages
+
+### / — Home
+The main converter tool with real-time preview, full customization (8 fonts, bold/italic, custom colors, 6 aspect ratios), and text input mode.
+
+### /text-to-image — Text to Image Guide
+Comprehensive guide covering why client-side matters, how-to steps, format support, settings guide, and use cases.
+
+### /txt-to-png — TXT to PNG
+Detailed guide on converting text files to lossless PNG images with format comparison (PNG vs JPG vs WebP).
+
+### /txt-to-jpg — TXT to JPG
+Guide on converting text files to compact JPG images for email, messaging, and social media.
+
+### /code-to-image — Code to Image
+Developer-focused guide for converting source code files (15+ languages) to shareable images.
+
+### /csv-to-image — CSV to Image
+Guide for converting structured data files (CSV, JSON, XML, YAML) to presentation-ready images.
+
+### /json-to-image — JSON to Image
+Guide for converting JSON files to images for API documentation and configuration sharing.
+
+### /md-to-image — Markdown to Image
+Guide for converting Markdown (.md) files to images for draft reviews and documentation.
+
+### /log-to-image — Log to Image
+Guide for converting log files to images for incident reports and team communication.
+
+### /how-it-works — Complete Guide
+Step-by-step guide with customization details, format recommendations, troubleshooting, and pro tips.
+
+### /compare — Tool Comparison
+Honest comparison of txttoimage vs Convertio, FreeConvert, Filestack, and other text-to-image converters.
+
+## Technical Details
+- Built with Astro 5 (static site generation)
+- 100% client-side processing via FileReader and Canvas APIs
+- No server-side processing, no file uploads, no data collection
+- Deployed on Cloudflare Pages

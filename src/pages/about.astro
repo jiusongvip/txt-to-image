@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About txttoimage — Free, Private Text to Image Converter"
+  description="Learn about txttoimage — a free, client-side text-to-image converter built for privacy, speed, and simplicity. No uploads, no sign-ups, no limits."
+  path="/about"
+>
+  <section class="min-h-[50dvh] flex flex-col pt-28 pb-12">
+    <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full px-4">
+      <p class="text-sm text-emerald-600 font-medium mb-3"><a href="/" class="hover:underline">txttoimage</a> &rsaquo; About</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">About txttoimage</h1>
+      <p class="mt-4 text-lg text-zinc-500 leading-relaxed max-w-2xl">A free, private, client-side text-to-image converter — built because uploading files to random servers should not be the default.</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Why txttoimage Exists</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Every major text-to-image converter on the web — Convertio, Online-Convert, FreeConvert, CoolUtils — requires you to upload your files to their servers. This means your documents, source code, configuration files, and personal notes pass through infrastructure you do not control. For most file types, this is an acceptable trade-off. For text files — which often contain proprietary code, API keys, confidential business data, and personal information — it is an unnecessary risk.</p>
+      <p class="mt-4 text-zinc-500 leading-relaxed">txttoimage was built to prove that text-to-image conversion does not need a server. The entire converter runs in your browser using two standard Web APIs: the FileReader API to read your file, and the HTML5 Canvas API to render it as an image. No file content ever leaves your device. This architecture is not just better for privacy — it is faster (no upload queue), unlimited (no server costs per conversion), and simpler (no accounts, no sign-ups).</p>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight mt-12">How It Works</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">When you drop a file onto the converter or type text directly:</p>
+      <ol class="mt-4 space-y-3 text-zinc-500 list-decimal ml-5">
+        <li><strong>FileReader API</strong> reads your file into browser memory. The content is never transmitted over the network. You can verify this by opening your browser's Developer Tools (F12), navigating to the Network tab, and confirming no upload occurs.</li>
+        <li><strong>Canvas API</strong> renders the text as a high-resolution image with your chosen font, colors, size, and aspect ratio. The canvas element is a standard HTML5 feature available in every modern browser.</li>
+        <li><strong>toDataURL()</strong> exports the canvas as a PNG, JPG, or WebP image that you can download directly to your device. No server round-trip, no processing queue, no waiting.</li>
+      </ol>
+      <p class="mt-4 text-zinc-500 leading-relaxed">On high-DPI (Retina) screens, the converter automatically renders at 2× resolution, producing sharp text even at small font sizes. Custom Google Fonts (JetBrains Mono, Fira Code, Inter, Lora) are preloaded to ensure crisp, accurate text rendering.</p>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight mt-12">What Sets Us Apart</h2>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900 text-sm">100% Free, No Strings Attached</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">No daily limits, no premium tiers, no watermarks, no forced sign-ups. Because all processing happens in your browser, each conversion costs us nothing — making a permanently free tool economically sustainable.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900 text-sm">Zero Data Collection</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">We do not use Google Analytics, tracking pixels, or any third-party analytics. We do not log conversion history. We cannot access your files even if we wanted to — the architecture makes it technically impossible.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900 text-sm">No Ads, No Distractions</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Most free online tools are ad-supported. txttoimage has no ads, no promotional banners, and no upsell modals. The tool itself is the product.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900 text-sm">Open About the Architecture</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">We explain exactly how the converter works. You can verify the client-side processing claim yourself using browser DevTools. There is no black box — just standard Web APIs doing what they were designed to do.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight mt-12">Technology</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">txttoimage is built with <strong>Astro 5</strong> — a modern static site generator that produces pure HTML, CSS, and JavaScript with zero runtime overhead. The site is deployed on <strong>Cloudflare Pages</strong>, serving content from Cloudflare's global edge network for fast load times worldwide. The converter itself uses standard browser APIs (FileReader, Canvas) with no external dependencies. Custom fonts are served from Google Fonts.</p>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight mt-12">Contact</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Have feedback, found a bug, or want to suggest a feature? Visit our <a href="/contact" class="text-emerald-600 hover:underline">contact page</a> or email <strong>hello@txt-to-image.com</strong>. We read every message and aim to respond within 24 hours.</p>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight mt-12">About the Creator</h2>
+      <div class="mt-6 bg-white border border-zinc-200 rounded-xl p-6 flex flex-col sm:flex-row gap-5 items-start">
+        <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-zinc-900">Jiusong</h3>
+          <p class="text-xs text-zinc-400">Independent Developer · Full-Stack · Beijing</p>
+          <p class="mt-3 text-sm text-zinc-500 leading-relaxed">txttoimage was built as an independent project to solve a real problem: every existing text-to-image converter requires uploading your files to a server. I believed text conversion should be private, instant, and free — and that client-side Web APIs (FileReader + Canvas) were mature enough to make this possible without any server infrastructure. The entire converter runs in your browser, and I designed it so that even I cannot access your files. No analytics, no tracking, no ads — just a tool that does one thing well. I use this tool daily for sharing code snippets and documentation, and I hope you find it as useful as I do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-lg font-semibold text-zinc-500 uppercase tracking-wide">Related Pages</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="/how-it-works" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">How It Works</a>
+        <a href="/privacy" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Privacy Policy</a>
+        <a href="/contact" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Contact</a>
+        <a href="/compare" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Compare Tools</a>
+        <a href="/" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Home</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jiusong",
+  "description": "Independent full-stack developer. Creator of txt-to-image.com — a free, private, client-side text-to-image converter.",
+  "jobTitle": "Full-Stack Developer",
+  "url": "https://txt-to-image.com",
+  "email": "hello@txt-to-image.com",
+  "affiliation": {"@type": "Organization", "name": "txttoimage", "url": "https://txt-to-image.com"}
+}
+</script>

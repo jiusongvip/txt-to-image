@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="API & Automation — txttoimage | Client-Side Text to Image Conversion"
+  description="txttoimage runs entirely in your browser — no server API needed. Learn how to automate text-to-image conversion using Puppeteer, Playwright, or headless browsers."
+  path="/api"
+>
+  <section class="min-h-[50dvh] flex flex-col pt-28 pb-12">
+    <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full px-4">
+      <p class="text-sm text-emerald-600 font-medium mb-3"><a href="/" class="hover:underline">txttoimage</a> &rsaquo; API & Automation</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">API & Automation — Integrating Text-to-Image Conversion in Your Workflow</h1>
+      <p class="mt-4 text-lg text-zinc-500 leading-relaxed max-w-2xl">txttoimage is designed to run entirely in your browser. There is no server API — and that is intentional. Here is why, and how to achieve the same result with automation tools.</p>
+    </div>
+  </section>
+
+  <nav class="py-4 bg-white border-b border-zinc-200 sticky top-14 z-40">
+    <div class="max-w-3xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto">
+      <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 shrink-0">On this page:</span>
+      <a href="#why-no-api" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Why No API</a>
+      <a href="#headless" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Headless Automation</a>
+      <a href="#examples" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Code Examples</a>
+      <a href="#alternatives" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Alternatives</a>
+      <a href="#faq" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">FAQ</a>
+    </div>
+  </nav>
+
+  <section id="why-no-api" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Why txttoimage Has No Server API</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Every other online text-to-image converter works by uploading your file to a server, processing it in the cloud, and returning a result. This architecture makes a REST API natural — the server does the work, the client just sends and receives. But it also means your text content passes through infrastructure you do not control.</p>
+      <p class="mt-4 text-zinc-500 leading-relaxed">txttoimage was built on a different principle: <strong>all processing happens in your browser.</strong> When you drop a file onto the converter, the FileReader API reads it into browser memory. The Canvas API renders it as an image. The toDataURL() method exports it. No server is involved at any step. This architecture delivers three things that a server API cannot simultaneously provide:</p>
+
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Zero-Trust Privacy</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">A server API by definition receives your file content. Even if the provider deletes files after processing, the data transited their network. txttoimage eliminates this trust requirement entirely — your files never leave your device.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Zero Infrastructure Cost</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Running conversion servers costs money — which is why Convertio has daily limits, CoolUtils charges $29.90, and Filestack has paid API tiers. Client-side processing eliminates server costs entirely, enabling permanent free access.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-5">
+          <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Zero Latency</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">No network round-trip means instant conversion — under one second for typical files. A server API would add upload time, queue time, processing time, and download time for every conversion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="headless" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">How to Automate Text-to-Image Conversion</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">If you need to automate text-to-image conversion in a server environment or CI/CD pipeline, use a headless browser. Puppeteer and Playwright give you the same Canvas API that txttoimage uses — programmatically accessible, fully automated, and entirely within your control.</p>
+
+      <div class="mt-8 space-y-6">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Option 1: Puppeteer (Node.js)</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Puppeteer controls a headless Chromium instance. You can open any webpage — including txttoimage — and interact with it programmatically, or write your own Canvas-based converter that runs inside the headless browser. This gives you full control over the rendering pipeline without any external API dependency.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Option 2: Playwright (Cross-Browser)</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Playwright supports Chromium, Firefox, and WebKit with a single API. It is generally preferred for new projects due to its cross-browser support, auto-waiting, and better error messages. Like Puppeteer, you can either automate txttoimage or build a custom Canvas converter inside the headless browser.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Option 3: Electron or NW.js (Desktop Automation)</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">For desktop applications, Electron embeds a Chromium runtime. You can use the Canvas API directly in your Electron app's renderer process — no browser automation needed. This is ideal for building a native text-to-image conversion tool for internal use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="examples" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Code Examples</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Here is how to build your own text-to-image converter using standard Web APIs. These examples run in any Node.js environment with a Canvas implementation (like <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">node-canvas</code>) or inside a headless browser.</p>
+
+      <div class="mt-8 space-y-6">
+        <div class="bg-[#1e1e1e] rounded-xl overflow-hidden">
+          <div class="px-4 py-2 bg-zinc-800 text-xs text-zinc-400 font-mono">Node.js with node-canvas</div>
+          <div class="p-5 text-xs font-mono leading-relaxed overflow-x-auto" style="font-family: 'Fira Code', monospace; color: #d4d4d4;">
+            <div><span style="color:#c586c0">const</span> &#123; createCanvas &#125; = <span style="color:#dcdcaa">require</span>(<span style="color:#ce9178">'canvas'</span>);</div>
+            <div><span style="color:#c586c0">const</span> fs = <span style="color:#dcdcaa">require</span>(<span style="color:#ce9178">'fs'</span>);</div>
+            <div>&nbsp;</div>
+            <div><span style="color:#c586c0">function</span> <span style="color:#dcdcaa">textToImage</span>(<span style="color:#9cdcfe">text</span>, <span style="color:#9cdcfe">outputPath</span>) &#123;</div>
+            <div>&nbsp;&nbsp;<span style="color:#c586c0">const</span> W = <span style="color:#b5cea8">800</span>;</div>
+            <div>&nbsp;&nbsp;<span style="color:#c586c0">const</span> canvas = <span style="color:#dcdcaa">createCanvas</span>(W, <span style="color:#b5cea8">600</span>);</div>
+            <div>&nbsp;&nbsp;<span style="color:#c586c0">const</span> ctx = canvas.<span style="color:#dcdcaa">getContext</span>(<span style="color:#ce9178">'2d'</span>);</div>
+            <div>&nbsp;&nbsp;ctx.font = <span style="color:#ce9178">'14px monospace'</span>;</div>
+            <div>&nbsp;&nbsp;ctx.fillStyle = <span style="color:#ce9178">'#1a1a1a'</span>;</div>
+            <div>&nbsp;&nbsp;<span style="color:#c586c0">const</span> lines = text.split(<span style="color:#ce9178">'\n'</span>);</div>
+            <div>&nbsp;&nbsp;lines.forEach(<span style="color:#9cdcfe">(line, i)</span> =&gt; &#123;</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillText(line, <span style="color:#b5cea8">40</span>, <span style="color:#b5cea8">40</span> + i * <span style="color:#b5cea8">21</span>);</div>
+            <div>&nbsp;&nbsp;&#125;);</div>
+            <div>&nbsp;&nbsp;fs.<span style="color:#dcdcaa">writeFileSync</span>(outputPath, canvas.<span style="color:#dcdcaa">toBuffer</span>(<span style="color:#ce9178">'image/png'</span>));</div>
+            <div>&#125;</div>
+          </div>
+        </div>
+
+        <div class="bg-[#1e1e1e] rounded-xl overflow-hidden">
+          <div class="px-4 py-2 bg-zinc-800 text-xs text-zinc-400 font-mono">Python with Playwright</div>
+          <div class="p-5 text-xs font-mono leading-relaxed overflow-x-auto" style="font-family: 'Fira Code', monospace; color: #d4d4d4;">
+            <div><span style="color:#c586c0">from</span> playwright.sync_api <span style="color:#c586c0">import</span> sync_playwright</div>
+            <div>&nbsp;</div>
+            <div><span style="color:#c586c0">def</span> <span style="color:#dcdcaa">text_to_image</span>(<span style="color:#9cdcfe">text</span>, <span style="color:#9cdcfe">output_path</span>):</div>
+            <div>&nbsp;&nbsp;<span style="color:#c586c0">with</span> sync_playwright() <span style="color:#c586c0">as</span> p:</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;browser = p.chromium.launch()</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;page = browser.new_page()</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a9955"># Inject canvas conversion script</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;canvas_data = page.evaluate(<span style="color:#ce9178">"""</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#c586c0">const</span> canvas = document.createElement(<span style="color:#ce9178">'canvas'</span>);</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a9955">// ... Canvas setup and text rendering ...</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canvas.toDataURL(<span style="color:#ce9178">'image/png'</span>);</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ce9178">"""</span>)</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;browser.close()</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#c586c0">return</span> canvas_data</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="alternatives" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Server-Side API Alternatives</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">If you specifically need a server-side API for text-to-image conversion (and accept the privacy and cost trade-offs), these services offer REST APIs:</p>
+
+      <div class="mt-8 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b-2 border-zinc-200">
+              <th class="text-left py-3 pr-4 font-semibold text-zinc-900">Service</th>
+              <th class="text-left py-3 px-3 font-semibold text-zinc-700">Pricing</th>
+              <th class="text-left py-3 px-3 font-semibold text-zinc-700">Privacy Model</th>
+              <th class="text-left py-3 px-3 font-semibold text-zinc-700">Best For</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-100">
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">Filestack</td><td class="py-3 px-3 text-zinc-500">Free tier + paid plans</td><td class="py-3 px-3 text-zinc-500">Server-side upload</td><td class="py-3 px-3 text-zinc-500">Developer API integration</td></tr>
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">CloudConvert</td><td class="py-3 px-3 text-zinc-500">25 free/day + paid</td><td class="py-3 px-3 text-zinc-500">Server-side upload</td><td class="py-3 px-3 text-zinc-500">Reliable bulk conversion</td></tr>
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">ConvertAPI</td><td class="py-3 px-3 text-zinc-500">Free tier + paid plans</td><td class="py-3 px-3 text-zinc-500">Server-side upload</td><td class="py-3 px-3 text-zinc-500">Broad format support</td></tr>
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">Aspose</td><td class="py-3 px-3 text-zinc-500">Paid licensing</td><td class="py-3 px-3 text-zinc-500">Server-side upload</td><td class="py-3 px-3 text-zinc-500">Enterprise document processing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-zinc-400">All server-side APIs require uploading your files to their servers. txttoimage is designed for users who want to avoid this trade-off entirely.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
+      <p class="mt-4 text-zinc-500">Common questions about API and automation for text-to-image conversion.</p>
+
+      <dl class="mt-8 space-y-1">
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Why does txttoimage not offer an API? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">A server API would require uploading files to our servers — which contradicts the core privacy principle of txttoimage. The entire converter runs in your browser using FileReader and Canvas APIs. Adding a server API would mean compromising on the one thing that makes txttoimage different from every other converter: your files never leave your device.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">How can I automate text-to-image conversion? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Use a headless browser like Puppeteer or Playwright. You can either automate txttoimage.app itself, or build your own Canvas-based converter that runs inside the headless browser. Both approaches give you full programmatic control without any external API dependency. See the code examples above for Node.js and Python implementations.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Can I use txttoimage in a CI/CD pipeline? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Indirectly, yes. Use Puppeteer or Playwright in your CI pipeline to automate a headless browser that performs the conversion. This approach keeps your code and data within your own infrastructure — no third-party API calls, no uploads to external servers. This is particularly valuable for proprietary source code and confidential configuration files that should never leave your build environment.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What about server-side Canvas libraries like node-canvas? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">You can use node-canvas on the server side to build your own text-to-image API. This library provides a Canvas implementation for Node.js. You can replicate the txttoimage rendering logic (font selection, word wrapping, padding) in your own server application. This gives you full control over privacy, performance, and customization without relying on any external service.</div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-lg font-semibold text-zinc-500 uppercase tracking-wide">Related Pages</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="/how-it-works" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">How It Works</a>
+        <a href="/compare" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Compare Tools</a>
+        <a href="/privacy" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Privacy Policy</a>
+        <a href="/contact" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Contact</a>
+        <a href="/" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Home</a>
+      </div>
+    </div>
+  </section>
+</Layout>

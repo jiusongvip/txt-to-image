@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageCTA from '../components/PageCTA.astro';
+---
+
+<Layout
+  title="Markdown to Image — Convert .md Files to PNG/JPG Online | txttoimage"
+  description="Convert Markdown .md files to clean PNG or JPG images. Preview blog drafts and READMEs as shareable images. Free, private, client-side processing."
+  path="/md-to-image"
+>
+  <section class="min-h-[50dvh] flex flex-col pt-28 pb-12">
+    <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full px-4">
+      <p class="text-sm text-emerald-600 font-medium mb-3"><a href="/" class="hover:underline">txttoimage</a> &rsaquo; Markdown to Image</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">Markdown to Image Converter — Share .md Files as Visual Previews</h1>
+      <p class="mt-4 text-lg text-zinc-500 leading-relaxed max-w-2xl">Convert .md and .markdown files to clean PNG or JPG images. Preview blog drafts, README files, and documentation as shareable images that anyone can open — no Markdown preview tools needed. 100% client-side, no upload, instant results.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/#generator" class="bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-medium px-6 py-3 rounded-full transition-all duration-150 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 12h12l-4 8H10l-4-8z"/></svg>
+          Convert Markdown to Image Now
+        </a>
+        <a href="/code-to-image" class="bg-white border border-zinc-200 hover:border-zinc-300 text-zinc-600 font-medium px-6 py-3 rounded-full transition-all duration-150">Code to Image</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="py-4 bg-white border-b border-zinc-200 sticky top-14 z-40">
+    <div class="max-w-3xl mx-auto px-4 flex items-center gap-1.5 overflow-x-auto">
+      <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 shrink-0">On this page:</span>
+      <a href="#why" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Why</a>
+      <a href="#use-cases" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Use Cases</a>
+      <a href="#how-to" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">How To</a>
+      <a href="#settings" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">Settings</a>
+      <a href="#faq" class="shrink-0 text-xs text-zinc-500 hover:text-emerald-600 bg-zinc-50 hover:bg-emerald-50 border border-zinc-200 hover:border-emerald-200 rounded-full px-3 py-1.5 transition-colors">FAQ</a>
+    </div>
+  </nav>
+
+  <!-- Why -->
+  <section id="why" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Why Convert Markdown to Image?</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Markdown is the standard format for READMEs, blog drafts, technical documentation, and note-taking — used by millions of developers and writers every day. But sharing raw .md files creates friction. Converting Markdown to images solves the most common problems in content collaboration workflows.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Share Drafts Without Rendering — Anyone Can View</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Most people — clients, editors, managers, non-technical stakeholders — cannot preview raw Markdown. They see <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">## Heading</code> and <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">**bold**</code> as raw markup. Converting to an image lets everyone see the content immediately on any device, without Markdown preview tools, browser extensions, or special software.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Prevent Accidental Edits During Review</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">When you send an .md file for review, anyone can accidentally modify formatting, delete sections, or introduce syntax errors. Converting the draft to an image freezes it as a fixed reference point. Reviewers see exactly what you wrote — no risk of unintended changes creeping into the document.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">README Previews for Social Media and Team Chats</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Before publishing a GitHub project, convert your README.md to an image and share it on Twitter/X, LinkedIn, or in team Slack channels to gather early feedback. An image preview generates more engagement than linking to a repository — people can see what your project is about without clicking away.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></div>
+          <h3 class="font-semibold text-zinc-900 text-sm">Embed Documentation in Presentations</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Drop .md documentation files directly into PowerPoint, Google Slides, or Keynote as images. The image captures your Markdown exactly as written — no copy-paste reformatting, no broken tables, no missing code blocks. Use 4:3 or 16:9 aspect ratio to match your slide deck dimensions for a seamless fit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section id="use-cases" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Real-World Markdown to Image Scenarios</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Here is how developers, technical writers, and content creators use Markdown-to-image conversion in their daily workflows.</p>
+
+      <div class="mt-8 space-y-5">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Blog Draft Reviews with Editors</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Content teams often write blog posts in Markdown (via static site generators like Hugo, Astro, or Jekyll) before publishing. Converting the draft to an image lets editors review the content without needing to clone a repo or run a local dev server. The image snapshot ensures everyone is looking at the same version during the review cycle.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Client Deliverables — Presenting Draft Content</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Freelance writers and agencies can share article drafts with clients as images instead of .md files. Clients do not need to understand Markdown, install a preview tool, or worry about accidentally modifying the content. The image is a professional deliverable that communicates the content clearly.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Open Source Project Promotion</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Your README.md is the first thing people see on GitHub, but it does not work well on visual platforms like Twitter/X or LinkedIn. Converting key sections of your README to images creates shareable content that drives traffic to your repository. A well-designed README image on social media can significantly increase project visibility.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <h3 class="font-semibold text-zinc-900">Internal Wiki Documentation Snapshots</h3>
+          <p class="mt-2 text-sm text-zinc-500 leading-relaxed">For teams using Markdown-based wikis (GitHub Wiki, GitBook, MkDocs), converting policy documents, onboarding guides, and process documentation to images creates versioned snapshots. These can be referenced in tickets, emails, and reports as permanent records of what the documentation said at a specific point in time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How To -->
+  <section id="how-to" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">How to Convert .md Files to Images</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">The process takes under 5 seconds. Here is the complete workflow with Markdown-specific recommendations.</p>
+      <div class="mt-8 space-y-8">
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">1</span><h3 class="font-semibold text-zinc-900 text-lg">Drop Your .md or .markdown File</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Drag and drop your Markdown file onto the converter. The file is read locally by your browser's FileReader API — no upload. You will see the file name, size, line count, and a preview of the first 2,000 characters showing the raw Markdown syntax. The converter reads the file as raw text, preserving all Markdown formatting markers exactly as they appear in your editor.</p>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">2</span><h3 class="font-semibold text-zinc-900 text-lg">Configure for Maximum Readability</h3></div>
+          <ul class="space-y-2 text-sm text-zinc-500 ml-4 list-disc">
+            <li><strong>Font:</strong> JetBrains Mono for technical Markdown with code blocks — preserves indentation and special characters. Inter for prose-heavy documents like blog posts and articles.</li>
+            <li><strong>Font size:</strong> 14-16px for general reading. 12px for dense technical documentation with long code examples.</li>
+            <li><strong>Colors:</strong> white background with dark text for documents and reports. Dark background with light text for developer-focused README previews.</li>
+            <li><strong>Padding:</strong> 40-60px for a polished, magazine-quality look. 20-30px for quick internal team sharing.</li>
+            <li><strong>Format:</strong> PNG for lossless quality — essential for documentation that may be zoomed in or printed. JPG for email attachments when file size matters.</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-zinc-200 rounded-xl p-6">
+          <div class="flex items-center gap-4 mb-4"><span class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0">3</span><h3 class="font-semibold text-zinc-900 text-lg">Download and Share</h3></div>
+          <p class="text-sm text-zinc-500 leading-relaxed">Click Convert to Image, preview your Markdown rendered as an image, and download. The image captures your Markdown syntax exactly as written — # for headings, ** for bold, backticks for code — giving reviewers the complete structural picture. Your document is ready to share anywhere images are accepted.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Settings -->
+  <section id="settings" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Recommended Settings for Markdown Documents</h2>
+      <p class="mt-4 text-zinc-500 leading-relaxed">Different types of Markdown content benefit from different visual configurations. Here are the settings that produce the best results for common document types.</p>
+
+      <div class="mt-8 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b-2 border-zinc-200">
+              <th class="text-left py-3 pr-4 font-semibold text-zinc-900">Document Type</th>
+              <th class="text-left py-3 px-3 font-semibold text-zinc-700">Font</th>
+              <th class="text-left py-3 px-3 font-semibold text-zinc-700">Size</th>
+              <th class="text-left py-3 px-3 font-semibold text-zinc-700">Background</th>
+              <th class="text-left py-3 px-3 font-semibold text-zinc-700">Format</th>
+              <th class="text-left py-3 px-3 font-semibold text-zinc-700">Aspect</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-100">
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">Technical README</td><td class="py-3 px-3 text-zinc-500">JetBrains Mono</td><td class="py-3 px-3 text-zinc-500">14px</td><td class="py-3 px-3 text-zinc-500">White</td><td class="py-3 px-3 text-zinc-500">PNG</td><td class="py-3 px-3 text-zinc-500">16:9</td></tr>
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">Blog Post Draft</td><td class="py-3 px-3 text-zinc-500">Inter</td><td class="py-3 px-3 text-zinc-500">16px</td><td class="py-3 px-3 text-zinc-500">White</td><td class="py-3 px-3 text-zinc-500">PNG</td><td class="py-3 px-3 text-zinc-500">4:3</td></tr>
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">Internal Wiki Page</td><td class="py-3 px-3 text-zinc-500">Inter</td><td class="py-3 px-3 text-zinc-500">14px</td><td class="py-3 px-3 text-zinc-500">White</td><td class="py-3 px-3 text-zinc-500">JPG</td><td class="py-3 px-3 text-zinc-500">16:9</td></tr>
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">Social Media Preview</td><td class="py-3 px-3 text-zinc-500">Fira Code</td><td class="py-3 px-3 text-zinc-500">16px</td><td class="py-3 px-3 text-zinc-500">Dark</td><td class="py-3 px-3 text-zinc-500">PNG</td><td class="py-3 px-3 text-zinc-500">16:9</td></tr>
+            <tr><td class="py-3 pr-4 font-medium text-zinc-800">Client Deliverable</td><td class="py-3 px-3 text-zinc-500">Lora</td><td class="py-3 px-3 text-zinc-500">16px</td><td class="py-3 px-3 text-zinc-500">White</td><td class="py-3 px-3 text-zinc-500">PNG</td><td class="py-3 px-3 text-zinc-500">4:3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-zinc-100">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight">Frequently Asked Questions</h2>
+      <p class="mt-4 text-zinc-500">Common questions about converting Markdown files to images.</p>
+      <dl class="mt-8 space-y-1">
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Does the converter render Markdown formatting or show raw syntax? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">The converter reads .md files as raw text and displays the Markdown syntax as-is. Headings show as <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">## Heading</code>, bold as <code class="bg-zinc-100 px-1.5 py-0.5 rounded text-xs">**text**</code>, and code blocks with their backtick delimiters. This is intentional — it preserves the exact structure of your document and lets reviewers see both the content and the formatting markup, which is valuable for editing workflows.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What are the best settings for Markdown images? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Use JetBrains Mono for technical Markdown with code blocks, Inter for prose-heavy documents. 14-16px font size for readability. White background with dark text for a clean document look, 40-60px padding for a polished appearance. Always use PNG for lossless quality — important for documentation that may be zoomed in.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Can I share Markdown drafts as images for review? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes — this is one of the most common use cases. Converting Markdown drafts to images lets you share content with editors, clients, or colleagues who may not have Markdown preview tools. The image freezes the content as a snapshot, preventing accidental edits during review and ensuring everyone sees the same version.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">Will code blocks in my Markdown remain properly formatted? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">Yes, as long as you use a monospace font (JetBrains Mono or Fira Code). Monospace ensures every character — including spaces — occupies the same width, so indented code blocks and inline code within your Markdown retain their exact formatting. Sans-serif and serif fonts will cause misalignment in code sections.</div>
+        </details>
+        <details class="group bg-white border border-zinc-200 rounded-xl">
+          <summary class="px-5 py-4 cursor-pointer font-medium text-zinc-900 text-sm flex items-center justify-between">What aspect ratio is best for Markdown documents? <svg xmlns="http://www.w3.org/2000/svg" class="group-open:rotate-180 transition-transform ml-2 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-5 pb-4 text-sm text-zinc-500 leading-relaxed">16:9 (1280×720) for social media and broad sharing. 4:3 (960×720) for embedding in presentations and slide decks. 3:4 (600×800) for long-form documentation that benefits from vertical space. For README previews shared on Twitter/X, 16:9 at 14px JetBrains Mono produces the most readable results.</div>
+        </details>
+      </dl>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-lg font-semibold text-zinc-500 uppercase tracking-wide">Related Converters</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="/txt-to-png" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">TXT to PNG</a>
+        <a href="/code-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Code to Image</a>
+        <a href="/json-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">JSON to Image</a>
+        <a href="/csv-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">CSV to Image</a>
+        <a href="/text-to-image" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">Text to Image</a>
+        <a href="/" class="text-sm text-zinc-600 bg-white border border-zinc-200 rounded-full px-4 py-2 hover:border-emerald-300 hover:text-emerald-600 transition-colors">All Converters</a>
+      </div>
+    </div>
+  </section>
+
+  <PageCTA title="Convert Your Markdown to an Image" description="Drop an .md file and get a clean, readable image. No uploads, no sign-up." buttonText="Convert Markdown to Image" />
+
+  <script type="application/ld+json" is:inline>
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the converter render Markdown formatting or show raw syntax?","acceptedAnswer":{"@type":"Answer","text":"The converter reads .md files as raw text and displays Markdown syntax as-is. This preserves the exact structure of your document and lets reviewers see both content and formatting markup."}},{"@type":"Question","name":"What are the best settings for Markdown images?","acceptedAnswer":{"@type":"Answer","text":"Use JetBrains Mono for technical Markdown with code blocks, Inter for prose. 14-16px font size, white background, 40-60px padding, PNG format for lossless quality."}},{"@type":"Question","name":"Can I share Markdown drafts as images for review?","acceptedAnswer":{"@type":"Answer","text":"Yes. Converting Markdown drafts to images lets you share content with people who may not have Markdown preview tools. The image freezes content as a snapshot, preventing accidental edits."}},{"@type":"Question","name":"Will code blocks in my Markdown remain properly formatted?","acceptedAnswer":{"@type":"Answer","text":"Yes, with monospace fonts like JetBrains Mono or Fira Code. Monospace ensures every character occupies the same width, preserving indentation in code blocks and inline code."}},{"@type":"Question","name":"What aspect ratio is best for Markdown documents?","acceptedAnswer":{"@type":"Answer","text":"16:9 for social media, 4:3 for presentations, 3:4 for long-form documentation. For README previews on Twitter/X, 16:9 at 14px JetBrains Mono produces the most readable results."}}]}
+  </script>
+</Layout>

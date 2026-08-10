@@ -1,0 +1,137 @@
+---
+import type { PropsWithChildren } from 'astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+}
+
+const { title, description, path } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2310b981'/><path d='M8 22V10l6 6 2-2 4 4 4-4v8H8z' fill='white' opacity='0.9'/><circle cx='22' cy='10' r='2.5' fill='white'/></svg>" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={path ? "https://txt-to-image.com" + path : "https://txt-to-image.com"} />
+    <meta property="og:image" content="https://txt-to-image.com/og-image.png" />
+    <meta property="og:updated_time" content="2026-08-10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="canonical" href={path ? "https://txt-to-image.com" + path : "https://txt-to-image.com"} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.woff2" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Satoshi:wght@400;500;700;900&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Satoshi:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
+    <style is:global>
+      body { font-family: 'Satoshi', system-ui, sans-serif; }
+    </style>
+</head>
+  <body class="bg-zinc-50 text-zinc-900 antialiased">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-emerald-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-zinc-50/80 backdrop-blur-sm border-b border-zinc-200/60">
+      <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+        <a href="/" class="font-bold text-lg tracking-tight text-zinc-900">txttoimage</a>
+        <button id="menu-toggle" class="sm:hidden p-2 -mr-2 text-zinc-500 hover:text-zinc-900" aria-label="Toggle menu" aria-expanded="false">
+          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+        </button>
+        <nav id="main-nav" class="hidden sm:flex items-center gap-4 text-sm text-zinc-500">
+          <a href="/#features" class="hover:text-zinc-900 transition-colors">Features</a>
+          <a href="/txt-to-png" class="hover:text-zinc-900 transition-colors">TXT to PNG</a>
+          <a href="/code-to-image" class="hover:text-zinc-900 transition-colors">Code to Image</a>
+          <a href="/compare" class="hover:text-zinc-900 transition-colors">Compare</a>
+          <a href="/how-it-works" class="hover:text-zinc-900 transition-colors">How To</a>
+          <a href="/#formats" class="hover:text-zinc-900 transition-colors">Formats</a>
+          <a href="/#faq" class="hover:text-zinc-900 transition-colors">FAQ</a>
+        </nav>
+        <nav id="mobile-nav" class="hidden absolute top-14 left-0 right-0 bg-white border-b border-zinc-200 shadow-lg sm:hidden">
+          <div class="flex flex-col p-4 gap-3">
+            <a href="#features" class="text-sm text-zinc-600 hover:text-zinc-900 py-2 mobile-nav-link">Features</a>
+            <a href="#how-it-works" class="text-sm text-zinc-600 hover:text-zinc-900 py-2 mobile-nav-link">How To</a>
+            <a href="#formats" class="text-sm text-zinc-600 hover:text-zinc-900 py-2 mobile-nav-link">Formats</a>
+            <a href="#faq" class="text-sm text-zinc-600 hover:text-zinc-900 py-2 mobile-nav-link">FAQ</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <slot />
+    </main>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const openIcon = document.getElementById('menu-icon-open');
+    const closeIcon = document.getElementById('menu-icon-close');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = mobileNav.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden', !open);
+        closeIcon.classList.toggle('hidden', open);
+        toggle.setAttribute('aria-expanded', String(!open));
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+          openIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
+  <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "txttoimage",
+      "url": "https://txt-to-image.com",
+      "description": "Free, private, client-side text-to-image converter. No uploads, no sign-ups, no limits.",
+      "email": "hello@txt-to-image.com",
+      "sameAs": []
+    },
+    {
+      "@type": "WebApplication",
+      "name": "txttoimage - Free TXT to Image Converter",
+      "description": "Convert .txt, .md and other text files to PNG, JPG or WebP images instantly. Free, private, client-side processing.",
+      "url": "https://txt-to-image.com",
+      "applicationCategory": "Multimedia",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+}
+  </script>
+{
+  path ? (
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://txt-to-image.com/" },
+    { "@type": "ListItem", "position": 2, "name": "{path.replace('/', '').replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}", "item": "https://txt-to-image.com{path}" }
+  ]
+}
+    </script>
+  ) : null
+}
+</body>
+</html>
