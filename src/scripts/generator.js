@@ -26,6 +26,10 @@ const fontSize = document.getElementById('font-size');
 const fontFamily = document.getElementById('font-family');
 const bgColor = document.getElementById('bg-color');
 const textColor = document.getElementById('text-color');
+const bgStyle = document.getElementById('bg-style');
+const bgColor2 = document.getElementById('bg-color2');
+const gradientDirection = document.getElementById('gradient-direction');
+const gradientOptions = document.getElementById('gradient-options');
 const padding = document.getElementById('padding');
 const aspectRatioSelect = document.getElementById('aspect-ratio');
 const statusLive = document.getElementById('generation-status');
@@ -219,6 +223,32 @@ function getDimensionsFromRatio(ratio) {
   return map[ratio] || [1280, 720];
 }
 
+// Gradient direction -> linear gradient start/end points
+function getGradientPoints(imgW, imgH, direction) {
+  switch (direction) {
+    case 'bottom-top':    return [imgW / 2, imgH, imgW / 2, 0];
+    case 'left-right':    return [0, imgH / 2, imgW, imgH / 2];
+    case 'right-left':    return [imgW, imgH / 2, 0, imgH / 2];
+    case 'diagonal':      return [0, 0, imgW, imgH];
+    case 'anti-diagonal': return [imgW, 0, 0, imgH];
+    default:              return [imgW / 2, 0, imgW / 2, imgH]; // top-bottom
+  }
+}
+
+// Fill canvas background: solid color or linear gradient
+function fillBackground(ctx, imgW, imgH, bgStyle, bg, bg2, direction) {
+  if (bgStyle === 'gradient') {
+    const [x1, y1, x2, y2] = getGradientPoints(imgW, imgH, direction);
+    const grad = ctx.createLinearGradient(x1, y1, x2, y2);
+    grad.addColorStop(0, bg);
+    grad.addColorStop(1, bg2);
+    ctx.fillStyle = grad;
+  } else {
+    ctx.fillStyle = bg;
+  }
+  ctx.fillRect(0, 0, imgW, imgH);
+}
+
 let fileContent = '';
 let currentFileName = '';
 let currentMode = 'upload';
@@ -286,7 +316,7 @@ function createHiDPICanvas(w, h) {
 
 // ============== Rendering Engine ==============
 // Returns needed height when imgH is 0 (auto mode)
-function renderContentToCanvas(canvas, ctx, content, fFamily, fSize, pad, bg, fg, imgW, imgH) {
+function renderContentToCanvas(canvas, ctx, content, fFamily, fSize, pad, bg, fg, imgW, imgH, bgStyle, bg2, gradientDir) {
   const fontStr = buildFontStr(fFamily, fSize, isBold, isItalic);
   ctx.font = fontStr;
   const lineHeight = fSize * 1.5;
@@ -334,8 +364,7 @@ function renderContentToCanvas(canvas, ctx, content, fFamily, fSize, pad, bg, fg
     ctx.scale(dpr, dpr);
   }
 
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, imgW, effectiveH);
+  fillBackground(ctx, imgW, effectiveH, bgStyle, bg, bg2, gradientDir);
 
   if (tokens) {
     const visualLines = renderTokensToLines(ctx, tokens, maxLineWidth);
@@ -439,11 +468,14 @@ function renderPreview(content) {
   const pad = parseInt(padding?.value) || 40;
   const bg = bgColor?.value || '#ffffff';
   const fg = textColor?.value || '#1a1a1a';
+  const bStyle = bgStyle?.value || 'solid';
+  const bg2 = bgColor2?.value || bg;
+  const gDir = gradientDirection?.value || 'top-bottom';
   const [imgW, imgH] = getDimensionsFromRatio(aspectRatioSelect?.value);
 
   fontsReady.then(() => {
     const { canvas, ctx } = createHiDPICanvas(imgW, imgH);
-    renderContentToCanvas(canvas, ctx, content, fFamily, fSize, pad, bg, fg, imgW, imgH);
+    renderContentToCanvas(canvas, ctx, content, fFamily, fSize, pad, bg, fg, imgW, imgH, bStyle, bg2, gDir);
 
     const mime = (outputFormat?.value === 'jpg') ? 'image/jpeg' : (outputFormat?.value === 'webp') ? 'image/webp' : 'image/png';
     const fmt = outputFormat?.value || 'png';
@@ -521,6 +553,8 @@ window.preset = function(type) {
   textColor.value = p.fg; textColor.nextElementSibling.textContent = p.fg;
   aspectRatioSelect.value = p.ratio;
   outputFormat.value = p.fmt;
+  if (bgStyle) { bgStyle.value = 'solid'; if (gradientOptions) gradientOptions.classList.add('hidden'); }
+  if (bgColor2) { bgColor2.value = p.bg; if (bgColor2.nextElementSibling) bgColor2.nextElementSibling.textContent = p.bg; }
   if (currentMode === 'text' && fileContent) doLivePreview();
 };
 
@@ -590,11 +624,14 @@ if (convertBtn) convertBtn.addEventListener('click', () => {
       const pad = parseInt(padding.value) || 40;
       const bg = bgColor.value || '#ffffff';
       const fg = textColor.value || '#1a1a1a';
+      const bStyle = bgStyle?.value || 'solid';
+      const bg2 = bgColor2?.value || bg;
+      const gDir = gradientDirection?.value || 'top-bottom';
       const format = outputFormat.value || 'png';
       const [imgW, imgH] = getDimensionsFromRatio(aspectRatioSelect?.value);
       const { canvas, ctx } = createHiDPICanvas(imgW, imgH);
 
-      renderContentToCanvas(canvas, ctx, fileContent, fFamily, fSize, pad, bg, fg, imgW, imgH);
+      renderContentToCanvas(canvas, ctx, fileContent, fFamily, fSize, pad, bg, fg, imgW, imgH, bStyle, bg2, gDir);
 
       const mime = format === 'jpg' ? 'image/jpeg' : format === 'webp' ? 'image/webp' : 'image/png';
       resultImage.src = canvas.toDataURL(mime, 0.92);
@@ -617,7 +654,19 @@ if (convertBtn) convertBtn.addEventListener('click', () => {
 // Settings change triggers
 if (fontSize) fontSize.addEventListener('change', () => { if (currentMode === 'text' && fileContent) doLivePreview(); });
 if (fontFamily) fontFamily.addEventListener('change', () => { if (currentMode === 'text' && fileContent) doLivePreview(); });
-if (bgColor) bgColor.addEventListener('input', () => { if (currentMode === 'text' && fileContent) doLivePreview(); });
+if (bgStyle) bgStyle.addEventListener('change', () => {
+  if (gradientOptions) gradientOptions.classList.toggle('hidden', bgStyle.value !== 'gradient');
+  if (currentMode === 'text' && fileContent) doLivePreview();
+});
+if (bgColor) bgColor.addEventListener('input', () => {
+  if (bgColor.nextElementSibling) bgColor.nextElementSibling.textContent = bgColor.value;
+  if (currentMode === 'text' && fileContent) doLivePreview();
+});
+if (bgColor2) bgColor2.addEventListener('input', () => {
+  if (bgColor2.nextElementSibling) bgColor2.nextElementSibling.textContent = bgColor2.value;
+  if (currentMode === 'text' && fileContent) doLivePreview();
+});
+if (gradientDirection) gradientDirection.addEventListener('change', () => { if (currentMode === 'text' && fileContent) doLivePreview(); });
 if (textColor) textColor.addEventListener('input', () => { if (currentMode === 'text' && fileContent) doLivePreview(); });
 if (padding) padding.addEventListener('change', () => { if (currentMode === 'text' && fileContent) doLivePreview(); });
 if (aspectRatioSelect) aspectRatioSelect.addEventListener('change', () => { if (currentMode === 'text' && fileContent) doLivePreview(); });

@@ -140,11 +140,34 @@ import CTABar from '../components/CTABar.astro';
               </div>
             </div>
             <div>
+              <label for="bg-style" class="block text-xs font-medium text-zinc-500 mb-1.5">Background Style</label>
+              <select id="bg-style" class="w-full text-sm bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 outline-none cursor-pointer hover:border-zinc-300 transition-colors appearance-none">
+                <option value="solid">Solid Color</option>
+                <option value="gradient">Gradient</option>
+              </select>
+            </div>
+            <div>
               <label for="bg-color" class="block text-xs font-medium text-zinc-500 mb-1.5">Background Color</label>
               <div class="flex items-center gap-2 bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-1.5">
                 <input type="color" id="bg-color" value="#ffffff" class="w-6 h-6 rounded cursor-pointer border-0 p-0" />
                 <span class="text-xs text-zinc-500 font-mono">#ffffff</span>
               </div>
+            </div>
+            <div id="gradient-options" class="hidden">
+              <label for="bg-color2" class="block text-xs font-medium text-zinc-500 mb-1.5">Gradient End Color</label>
+              <div class="flex items-center gap-2 bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-1.5">
+                <input type="color" id="bg-color2" value="#1e1e1e" class="w-6 h-6 rounded cursor-pointer border-0 p-0" />
+                <span class="text-xs text-zinc-500 font-mono">#1e1e1e</span>
+              </div>
+              <label for="gradient-direction" class="block text-xs font-medium text-zinc-500 mb-1.5 mt-2">Gradient Direction</label>
+              <select id="gradient-direction" class="w-full text-sm bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 outline-none cursor-pointer hover:border-zinc-300 transition-colors appearance-none">
+                <option value="top-bottom" selected>Top &rarr; Bottom</option>
+                <option value="bottom-top">Bottom &rarr; Top</option>
+                <option value="left-right">Left &rarr; Right</option>
+                <option value="right-left">Right &rarr; Left</option>
+                <option value="diagonal">Diagonal &#x2198;</option>
+                <option value="anti-diagonal">Anti-diagonal &#x2199;</option>
+              </select>
             </div>
             <div>
               <label for="text-color" class="block text-xs font-medium text-zinc-500 mb-1.5">Text Color</label>
