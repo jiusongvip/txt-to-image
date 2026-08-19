@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   output: 'static',
-  trailingSlash: 'never',
-  site: 'https://txt-to-image.com',
+  trailingSlash: 'always',
+  site: 'https://www.txt-to-image.com',
 });

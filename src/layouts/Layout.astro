@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { title, description, path } = Astro.props as Props;
+const canonicalPath = path ? (path.endsWith("/") ? path : path + "/") : "";
 ---
 
 <!DOCTYPE html>
@@ -32,14 +33,14 @@ const { title, description, path } = Astro.props as Props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={path ? "https://txt-to-image.com" + path : "https://txt-to-image.com"} />
-    <meta property="og:image" content="https://txt-to-image.com/og-image.png" />
+    <meta property="og:url" content={path ? "https://www.txt-to-image.com" + canonicalPath : "https://www.txt-to-image.com"} />
+    <meta property="og:image" content="https://www.txt-to-image.com/og-image.png" />
     <meta property="og:updated_time" content="2026-08-10" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="theme-color" content="#fafafa" />
-    <link rel="canonical" href={path ? "https://txt-to-image.com" + path : "https://txt-to-image.com"} />
+    <link rel="canonical" href={path ? "https://www.txt-to-image.com" + canonicalPath : "https://www.txt-to-image.com"} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="font" href="https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.woff2" crossorigin />
@@ -61,10 +62,10 @@ const { title, description, path } = Astro.props as Props;
         </button>
         <nav id="main-nav" class="hidden sm:flex items-center gap-4 text-sm text-zinc-500">
           <a href="/#features" class="hover:text-zinc-900 transition-colors">Features</a>
-          <a href="/txt-to-png" class="hover:text-zinc-900 transition-colors">TXT to PNG</a>
-          <a href="/code-to-image" class="hover:text-zinc-900 transition-colors">Code to Image</a>
-          <a href="/compare" class="hover:text-zinc-900 transition-colors">Compare</a>
-          <a href="/how-it-works" class="hover:text-zinc-900 transition-colors">How To</a>
+          <a href="/txt-to-png/" class="hover:text-zinc-900 transition-colors">TXT to PNG</a>
+          <a href="/code-to-image/" class="hover:text-zinc-900 transition-colors">Code to Image</a>
+          <a href="/compare/" class="hover:text-zinc-900 transition-colors">Compare</a>
+          <a href="/how-it-works/" class="hover:text-zinc-900 transition-colors">How To</a>
           <a href="/#formats" class="hover:text-zinc-900 transition-colors">Formats</a>
           <a href="/#faq" class="hover:text-zinc-900 transition-colors">FAQ</a>
         </nav>
@@ -110,7 +111,7 @@ const { title, description, path } = Astro.props as Props;
     {
       "@type": "Organization",
       "name": "txttoimage",
-      "url": "https://txt-to-image.com",
+      "url": "https://www.txt-to-image.com",
       "description": "Free, private, client-side text-to-image converter. No uploads, no sign-ups, no limits.",
       "email": "hello@txt-to-image.com",
       "sameAs": []
@@ -119,7 +120,7 @@ const { title, description, path } = Astro.props as Props;
       "@type": "WebApplication",
       "name": "txttoimage - Free TXT to Image Converter",
       "description": "Convert .txt, .md and other text files to PNG, JPG or WebP images instantly. Free, private, client-side processing.",
-      "url": "https://txt-to-image.com",
+      "url": "https://www.txt-to-image.com",
       "applicationCategory": "Multimedia",
       "operatingSystem": "Web",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -134,8 +135,8 @@ const { title, description, path } = Astro.props as Props;
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://txt-to-image.com/" },
-    { "@type": "ListItem", "position": 2, "name": "{path.replace('/', '').replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}", "item": "https://txt-to-image.com{path}" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.txt-to-image.com/" },
+    { "@type": "ListItem", "position": 2, "name": "{path.replace('/', '').replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}", "item": "https://www.txt-to-image.com{path}" }
   ]
 }
     </script>

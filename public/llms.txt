@@ -1,8 +1,8 @@
-# txt-to-image.com — LLMs.txt
+# www.txt-to-image.com — LLMs.txt
 # Free, private, client-side text-to-image converter
 
 ## Overview
-txt-to-image.com is a free online tool that converts text files (.txt, .md, .csv, .log, .json, .xml, and 20+ formats) to PNG, JPG, or WebP images. Unlike Convertio, Online-Convert, and other server-based tools, txttoimage processes everything 100% client-side — files never leave the user's device.
+www.txt-to-image.com is a free online tool that converts text files (.txt, .md, .csv, .log, .json, .xml, and 20+ formats) to PNG, JPG, or WebP images. Unlike Convertio, Online-Convert, and other server-based tools, txttoimage processes everything 100% client-side — files never leave the user's device.
 
 ## Key Pages
 
